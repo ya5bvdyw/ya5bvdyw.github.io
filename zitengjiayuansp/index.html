@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>紫藤家园sp-社区生活与园艺记录</title>
+<meta name="description" content="紫藤家园sp是一个记录社区园艺、阳台种植与邻里生活的中文站点，分享紫藤养护时间表、楼栋花园改造日志、工具借用清单与居民实测反馈，帮助住户把公共绿地与自家窗台都照料得更有章法。">
+<meta name="keywords" content="紫藤家园sp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235b3a8c'/%3E%3Cpath d='M20 48c0-12 6-20 12-26 6 6 12 14 12 26' fill='none' stroke='%23e9d5ff' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='30' r='3' fill='%23c4b5fd'/%3E%3Ccircle cx='32' cy='24' r='3' fill='%23c4b5fd'/%3E%3Ccircle cx='40' cy='30' r='3' fill='%23c4b5fd'/%3E%3C/svg%3E">
+<style>
+:root{
+  --brand:#5b3a8c;
+  --brand-dark:#3f2666;
+  --brand-soft:#efe7f8;
+  --accent:#c2410c;
+  --accent-soft:#fdeee4;
+  --ink:#221b2e;
+  --ink-2:#4a3f5c;
+  --ink-3:#6f6484;
+  --line:#e3dced;
+  --bg:#faf8fd;
+  --card:#ffffff;
+  --ok:#166534;
+  --ok-soft:#e7f5ec;
+  --warn:#92400e;
+  --warn-soft:#fdf2dd;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(34,27,46,.05),0 8px 24px -12px rgba(34,27,46,.16);
+  --shadow-sm:0 1px 2px rgba(34,27,46,.06);
+  --space:clamp(14px,2.4vw,22px);
+  --maxw:1180px;
+  --announce-h:40px;
+  --head-h:64px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,"Segoe UI",sans-serif;
+}
+@media (max-width:720px){
+  :root{--announce-h:56px;--head-h:58px;}
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{animation:none!important;transition:none!important;}
+}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-text-size-adjust:100%;
+}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;letter-spacing:.01em;}
+p{margin:0 0 .85em;}
+ul,ol{margin:0;padding-left:1.25em;}
+li{margin-bottom:.35em;}
+a{color:var(--brand-dark);text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:2px;
+  border-radius:4px;
+}
+img{max-width:100%;display:block;}
+.announce{
+  position:sticky;top:0;z-index:60;
+  background:linear-gradient(90deg,var(--brand-dark),var(--brand));
+  color:#f4edff;font-size:13.5px;
+  min-height:var(--announce-h);
+  display:flex;align-items:center;
+}
+.announce-inner{
+  max-width:var(--maxw);margin:0 auto;padding:6px var(--space);
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+}
+.announce b{color:#ffe0b8;font-weight:700;}
+.announce a{color:#ffe0b8;text-decoration:underline;}
+.head{
+  position:sticky;top:var(--announce-h);z-index:50;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  min-height:var(--head-h);
+}
+.head-inner{
+  max-width:var(--maxw);margin:0 auto;padding:8px var(--space);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;min-height:44px;}
+.brand svg{flex:none;}
+.brand-name{font-size:19px;font-weight:800;color:var(--brand-dark);letter-spacing:.02em;}
+.nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin-left:auto;}
+.nav a{
+  padding:6px 10px;border-radius:999px;font-size:14.5px;color:var(--ink-2);
+  white-space:nowrap;
+}
+.nav a:hover{background:var(--brand-soft);text-decoration:none;color:var(--brand-dark);}
+.head-tools{display:flex;gap:8px;align-items:center;}
+.search-wrap{display:flex;align-items:center;gap:6px;}
+.search-wrap input{
+  width:150px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;
+  font-size:14px;font-family:inherit;background:#fff;color:var(--ink);
+}
+.search-wrap input:focus{width:190px;transition:width .2s ease;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:8px 16px;border-radius:999px;border:1px solid transparent;
+  font-family:inherit;font-size:14.5px;font-weight:600;cursor:pointer;
+  background:var(--brand);color:#fff;transition:transform .15s ease,background .15s ease;
+}
+.btn:hover{background:var(--brand-dark);transform:translateY(-2px);text-decoration:none;}
+.btn.ghost{background:#fff;color:var(--brand-dark);border-color:var(--line);}
+.btn.ghost:hover{background:var(--brand-soft);}
+.btn.small{padding:5px 12px;font-size:13.5px;}
+.menu-btn{
+  display:none;background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:8px 12px;font-size:15px;cursor:pointer;color:var(--ink);
+}
+@media (max-width:900px){
+  .menu-btn{display:inline-flex;}
+  .nav{display:none;}
+  .nav.open{
+    display:flex;flex-direction:row;flex-wrap:wrap;
+    width:100%;padding:8px 0 4px;border-top:1px solid var(--line);margin-top:6px;
+  }
+  .nav a{background:var(--brand-soft);}
+}
+@media (max-width:520px){
+  .search-wrap input{width:110px;}
+  .search-wrap input:focus{width:130px;}
+  .brand-name{font-size:17px;}
+}
+main{display:block;}
+section{scroll-margin-top:calc(var(--announce-h) + var(--head-h) + 14px);}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--space);}
+.hero{
+  background:
+    radial-gradient(900px 380px at 85% -10%,#e6d8f7 0%,transparent 60%),
+    radial-gradient(700px 320px at 0% 0%,#f5ecff 0%,transparent 55%),
+    linear-gradient(180deg,#fbf8ff,#f7f3fd);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:clamp(28px,5vw,54px) var(--space);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(20px,4vw,48px);align-items:center;
+}
+@media (max-width:860px){.hero-inner{grid-template-columns:1fr;}}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:4px 12px;font-size:13px;color:var(--brand-dark);box-shadow:var(--shadow-sm);
+  margin-bottom:14px;
+}
+.hero-tag i{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;}
+h1{
+  font-size:clamp(26px,4.4vw,42px);
+  color:var(--brand-dark);
+  letter-spacing:.01em;
+  margin-bottom:12px;
+}
+.hero-lead{font-size:clamp(15px,1.7vw,17px);color:var(--ink-2);max-width:34em;margin-bottom:18px;}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;}
+.hero-facts{display:flex;gap:22px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-3);}
+.hero-facts b{display:block;font-size:20px;color:var(--brand-dark);}
+.hero-art{position:relative;min-height:280px;}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 10px 24px rgba(91,58,140,.16));}
+.hero-art .art-label{
+  position:absolute;background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:5px 10px;font-size:12.5px;color:var(--ink-2);box-shadow:var(--shadow-sm);
+}
+.art-label.a{top:6%;left:2%;}
+.art-label.b{bottom:12%;right:0;}
+.art-label.c{bottom:40%;left:-2%;}
+@media (max-width:400px){.art-label.c{display:none;}}
+.notice{
+  background:var(--accent-soft);border:1px solid #f6d4bc;color:#7c2d12;
+  border-radius:var(--radius-sm);padding:10px 14px;font-size:14px;margin-top:6px;
+}
+.layout{
+  max-width:var(--maxw);margin:0 auto;padding:clamp(20px,4vw,40px) var(--space);
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(18px,3vw,36px);
+  align-items:start;
+}
+@media (max-width:960px){.layout{grid-template-columns:1fr;}}
+.content > section{margin-bottom:clamp(24px,4vw,44px);}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
+.sec-head h2{font-size:clamp(20px,2.6vw,25px);color:var(--brand-dark);}
+.sec-head .meta{font-size:13px;color:var(--ink-3);}
+.sec-sub{color:var(--ink-3);font-size:14px;margin:-6px 0 14px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);padding:16px 18px;
+}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+@media (max-width:820px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:560px){.grid-3,.grid-2{grid-template-columns:1fr;}}
+.pick{
+  display:flex;flex-direction:column;gap:8px;
+}
+.pick .kind{
+  font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.05em;
+}
+.pick h3{font-size:16.5px;color:var(--ink);}
+.pick p{font-size:14px;color:var(--ink-2);margin:0;}
+.pick .stat{font-size:12.5px;color:var(--ink-3);}
+.news-list{list-style:none;padding:0;margin:0;}
+.news-list li{
+  display:grid;grid-template-columns:78px minmax(0,1fr);gap:12px;
+  padding:11px 0;border-bottom:1px dashed var(--line);margin:0;
+}
+.news-list li:last-child{border-bottom:0;}
+.news-list time{font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums;}
+.news-list strong{display:block;font-size:15px;}
+.news-list span{font-size:13.5px;color:var(--ink-3);}
+.chan-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;}
+@media (max-width:820px){.chan-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media (max-width:560px){.chan-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+.chan{
+  display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:12px;transition:transform .15s ease,border-color .15s ease;
+  color:var(--ink);
+}
+.chan:hover{transform:translateY(-3px);border-color:#c9b6e6;text-decoration:none;}
+.chan b{display:block;font-size:15px;color:var(--brand-dark);}
+.chan span{font-size:12.5px;color:var(--ink-3);}
+.deep{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;}
+.deep-article{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(16px,3vw,26px);box-shadow:var(--shadow);
+}
+.deep-article h2{font-size:clamp(21px,2.8vw,26px);color:var(--brand-dark);margin-bottom:6px;}
+.deep-article .byline{font-size:13px;color:var(--ink-3);margin-bottom:16px;}
+.deep-article h3{font-size:18px;color:var(--ink);margin:22px 0 8px;padding-left:10px;border-left:4px solid var(--brand);}
+.deep-article p{font-size:15.5px;color:var(--ink-2);}
+.claim{
+  background:var(--brand-soft);border:1px solid #d8c8ee;border-radius:var(--radius-sm);
+  padding:12px 16px;margin:14px 0;font-size:15px;color:var(--brand-dark);
+}
+.claim b{color:var(--accent);}
+.check-table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0;}
+.check-table caption{text-align:left;font-size:13px;color:var(--ink-3);padding-bottom:6px;}
+.check-table th,.check-table td{
+  border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;
+}
+.check-table th{background:#f6f2fb;color:var(--brand-dark);font-weight:700;white-space:nowrap;}
+.check-table td{color:var(--ink-2);}
+.guide-steps{list-style:none;padding:0;margin:0;counter-reset:step;}
+.guide-steps li{
+  position:relative;padding:0 0 0 52px;margin-bottom:18px;
+}
+.guide-steps li::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;
+  background:var(--brand);color:#fff;font-weight:800;font-size:16px;
+  display:flex;align-items:center;justify-content:center;
+}
+.guide-steps b{display:block;font-size:15.5px;color:var(--ink);}
+.guide-steps p{font-size:14px;color:var(--ink-2);margin:2px 0 0;}
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:12px 16px;margin-bottom:10px;
+}
+.faq summary{
+  cursor:pointer;font-weight:700;font-size:15.5px;color:var(--brand-dark);
+  list-style:none;position:relative;padding-right:26px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"＋";position:absolute;right:0;top:-1px;color:var(--accent);font-weight:700;
+}
+.faq details[open] summary::after{content:"－";}
+.faq details p{margin:10px 0 2px;font-size:14.5px;color:var(--ink-2);}
+.comment-list{display:grid;gap:12px;}
+.comment{
+  background:#fff;border:1px solid var(--line);border-left:4px solid #c9b6e6;
+  border-radius:var(--radius-sm);padding:12px 16px;
+}
+.comment .who{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--ink-3);flex-wrap:wrap;}
+.comment .who b{color:var(--brand-dark);font-size:14px;}
+.comment p{font-size:14.5px;color:var(--ink-2);margin:6px 0 0;}
+.comment .ref{
+  display:inline-block;margin-top:8px;font-size:12.5px;color:var(--accent);
+  background:var(--accent-soft);border-radius:6px;padding:2px 8px;
+}
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+@media (max-width:640px){.news-grid{grid-template-columns:1fr;}}
+.news-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px;}
+.news-card h3{font-size:15.5px;margin-bottom:4px;}
+.news-card p{font-size:13.8px;color:var(--ink-2);margin:0 0 6px;}
+.news-card .src{font-size:12.5px;color:var(--ink-3);}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px;}
+.tag{
+  display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:5px 13px;font-size:13.5px;color:var(--ink-2);
+}
+.tag:hover{border-color:#c9b6e6;background:var(--brand-soft);text-decoration:none;color:var(--brand-dark);}
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:rk;}
+.rank-list li{
+  display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:center;
+  padding:10px 0;border-bottom:1px dashed var(--line);margin:0;
+}
+.rank-list li:last-child{border-bottom:0;}
+.rank-list li::before{
+  counter-increment:rk;content:counter(rk);
+  width:30px;height:30px;border-radius:8px;background:var(--brand-soft);color:var(--brand-dark);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;
+}
+.rank-list b{font-size:14.8px;}
+.rank-list .num{font-size:12.5px;color:var(--ink-3);white-space:nowrap;}
+.aside{position:sticky;top:calc(var(--announce-h) + var(--head-h) + 12px);display:grid;gap:16px;}
+@media (max-width:960px){.aside{position:static;}}
+.aside .box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow-sm);}
+.aside h2{font-size:16px;color:var(--brand-dark);margin-bottom:10px;}
+.side-nav{list-style:none;padding:0;margin:0;display:grid;gap:2px;}
+.side-nav a{
+  display:block;padding:6px 10px;border-radius:8px;font-size:14px;color:var(--ink-2);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:var(--brand-soft);text-decoration:none;}
+.side-nav a.active{background:var(--brand-soft);border-left-color:var(--brand);color:var(--brand-dark);font-weight:700;}
+.tip{font-size:13.5px;color:var(--ink-2);margin:0;}
+.tip b{color:var(--brand-dark);}
+.search-result{font-size:13.5px;color:var(--ink-2);min-height:1.5em;}
+.search-result.hit{color:var(--ok);}
+.search-result.miss{color:var(--accent);}
+.search-hit-list{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:4px;}
+.search-hit-list a{font-size:13.5px;}
+footer{
+  background:var(--brand-dark);color:#e4d9f3;margin-top:10px;
+  border-top:4px solid var(--accent);
+}
+.foot-inner{
+  max-width:var(--maxw);margin:0 auto;padding:clamp(26px,4vw,44px) var(--space) 20px;
+  display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;
+}
+@media (max-width:820px){.foot-inner{grid-template-columns:1fr 1fr;}}
+@media (max-width:540px){.foot-inner{grid-template-columns:1fr;}}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.foot-brand .brand-name{color:#fff;font-size:18px;}
+footer p{font-size:13.8px;color:#c7b9de;margin:0 0 8px;}
+footer h2{font-size:14.5px;color:#fff;margin-bottom:10px;letter-spacing:.04em;}
+.foot-links{list-style:none;padding:0;margin:0;display:grid;gap:6px;}
+.foot-links a{color:#d8c9ee;font-size:13.8px;}
+.foot-links a:hover{color:#fff;}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.14);
+  max-width:var(--maxw);margin:0 auto;padding:14px var(--space) 26px;
+  font-size:12.8px;color:#b5a5cd;display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;
+}
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:#fff;color:var(--brand-dark);font-size:18px;cursor:pointer;
+  box-shadow:var(--shadow);display:none;align-items:center;justify-content:center;
+}
+.to-top.show{display:flex;}
+@media (max-width:520px){.to-top{bottom:14px;right:12px;width:42px;height:42px;}}
+.tiny{font-size:12.5px;color:var(--ink-3);}
+.divider{height:1px;background:var(--line);margin:16px 0;}
+.timeline{list-style:none;padding:0;margin:0;border-left:3px solid var(--brand-soft);}
+.timeline li{position:relative;padding:0 0 16px 20px;margin:0;}
+.timeline li::before{
+  content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;
+  background:var(--brand);border:3px solid #fff;box-shadow:0 0 0 1px var(--line);
+}
+.timeline time{font-size:12.5px;color:var(--accent);font-weight:700;}
+.timeline b{display:block;font-size:15px;color:var(--ink);}
+.timeline p{font-size:13.8px;color:var(--ink-2);margin:2px 0 0;}
+.quote-card{
+  background:linear-gradient(135deg,#f6f0ff,#fdf7ef);
+  border:1px solid #e6d8f7;border-radius:var(--radius);padding:18px 20px;
+  position:relative;
+}
+.quote-card::before{
+  content:"“";position:absolute;top:-6px;left:12px;font-size:44px;color:#c4b5fd;font-family:Georgia,serif;
+}
+.quote-card p{font-size:15.5px;color:var(--ink);margin:8px 0 6px;}
+.quote-card cite{font-style:normal;font-size:13px;color:var(--ink-3);}
+.panel{
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+}
+.panel-row{display:grid;grid-template-columns:1fr 1fr;}
+@media (max-width:560px){.panel-row{grid-template-columns:1fr;}}
+.panel-cell{padding:14px 16px;}
+.panel-cell:first-child{background:#fbf8ff;border-right:1px solid var(--line);}
+@media (max-width:560px){.panel-cell:first-child{border-right:0;border-bottom:1px solid var(--line);}}
+.panel-cell h3{font-size:14.5px;margin-bottom:6px;color:var(--brand-dark);}
+.panel-cell p{font-size:13.8px;color:var(--ink-2);margin:0 0 4px;}
+.panel-cell.before h3{color:var(--ink-3);}
+.img-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px;}
+.img-row figure{margin:0;}
+.img-row img{aspect-ratio:16/10;width:100%;height:auto;object-fit:cover;border-radius:var(--radius-sm);border:1px solid var(--line);}
+.img-row figcaption{font-size:12.5px;color:var(--ink-3);margin-top:4px;}
+@media (max-width:520px){.img-row{grid-template-columns:1fr;}}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="announce" id="announce">
+  <div class="announce-inner">
+    <span><b>公告</b> 紫藤家园sp 第 12 期花架检修名单已出：3 号楼东侧花架于 11 月 6 日更换横杆 14 根，工具借用登记表同步更新。</span>
+    <a href="/#latest">查看更新明细 →</a>
+  </div>
+</div>
+
+<header class="head" id="top">
+  <div class="head-inner">
+    <a class="brand" href="/#top" aria-label="紫藤家园sp 首页">
+      <svg width="40" height="40" viewBox="0 0 64 64" role="img" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="14" fill="#5b3a8c"/>
+        <path d="M20 50c0-13 6-21 12-27 6 6 12 14 12 27" fill="none" stroke="#e9d5ff" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="24" cy="31" r="3" fill="#c4b5fd"/>
+        <circle cx="32" cy="24" r="3" fill="#c4b5fd"/>
+        <circle cx="40" cy="31" r="3" fill="#c4b5fd"/>
+        <path d="M14 50h36" stroke="#ffe0b8" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">紫藤家园sp</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+
+    <nav class="nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">社区概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">居民评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#tags">相关推荐</a>
+    </nav>
+
+    <div class="head-tools">
+      <div class="search-wrap">
+        <label for="siteSearch" class="tiny" style="position:absolute;left:-9999px;">站内搜索</label>
+        <input id="siteSearch" type="search" placeholder="搜花架、施肥、借工具" autocomplete="off">
+        <button class="btn small" id="searchBtn" type="button">查找</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-tag"><i></i>社区园艺记录 · 2026 年 11 月 8 日更新</span>
+        <h1 id="hero-title">紫藤家园sp</h1>
+        <p class="hero-lead">
+          记录三栋居民楼之间那条紫藤长廊的养护台账、楼栋花架的改造日志，也收纳阳台扦插、堆肥翻堆、工具借还这些零碎经验。数据来自 2026 年 10 月至 11 月的现场记录与住户登记。
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="/#deep">读深度解析</a>
+          <a class="btn ghost" href="/#guide">看体验指南</a>
+        </div>
+        <div class="hero-facts">
+          <div><b>4 条</b>公共花架</div>
+          <div><b>126 株</b>登记紫藤</div>
+          <div><b>37 户</b>参与养护</div>
+          <div><b>11 月 8 日</b>台账更新</div>
+        </div>
+        <div class="notice">本周重点：11 月 5 日起夜间气温降至 6℃，长廊西段已加装防寒布，浇水时间调整为上午 9 点前。</div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 320" role="img" focusable="false">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f3e9ff"/>
+              <stop offset="1" stop-color="#fdf8f1"/>
+            </linearGradient>
+            <linearGradient id="trunk" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#8a6b4f"/>
+              <stop offset="1" stop-color="#5f4732"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="420" height="320" rx="18" fill="url(#sky)"/>
+          <path d="M60 300c0-70 20-118 40-150" stroke="url(#trunk)" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M360 300c0-70-20-118-40-150" stroke="url(#trunk)" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M100 152c26-26 58-40 110-42 52 2 84 16 110 42" stroke="#6d4f9c" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <g fill="#8b5cf6" opacity=".9">
+            <circle cx="138" cy="128" r="9"/><circle cx="160" cy="146" r="8"/><circle cx="186" cy="124" r="8"/>
+            <circle cx="212" cy="112" r="9"/><circle cx="238" cy="126" r="8"/><circle cx="262" cy="142" r="8"/>
+            <circle cx="286" cy="122" r="8"/><circle cx="306" cy="146" r="9"/>
+          </g>
+          <g fill="#c4b5fd" opacity=".95">
+            <circle cx="150" cy="168" r="7"/><circle cx="176" cy="180" r="6"/><circle cx="204" cy="170" r="7"/>
+            <circle cx="232" cy="182" r="6"/><circle cx="258" cy="168" r="7"/><circle cx="286" cy="180" r="6"/>
+          </g>
+          <path d="M96 260h228" stroke="#c9b6e6" stroke-width="5" stroke-linecap="round"/>
+          <g stroke="#8a6b4f" stroke-width="4" stroke-linecap="round">
+            <path d="M120 260v-34"/><path d="M168 260v-34"/><path d="M216 260v-34"/><path d="M264 260v-34"/><path d="M312 260v-34"/>
+          </g>
+          <rect x="142" y="96" width="136" height="14" rx="7" fill="#ffe0b8" opacity=".8"/>
+          <path d="M60 300h300" stroke="#6d4f9c" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <span class="art-label a">长廊西段 · 防寒布</span>
+        <span class="art-label b">3 号楼花架 · 横杆 14 根</span>
+        <span class="art-label c">南区土壤 pH 7.2</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout">
+    <div class="content">
+
+      <!-- 1 领域概览 -->
+      <section id="overview" aria-labelledby="overview-title">
+        <div class="sec-head">
+          <h2 id="overview-title">紫藤长廊与楼栋花架现状</h2>
+          <span class="meta">2026-11-08 台账快照</span>
+        </div>
+        <p class="sec-sub">公共区域与私人阳台分开记账，数字来自每周三傍晚的现场点数。</p>
+        <div class="grid-3">
+          <div class="card pick">
+            <span class="kind">公共长廊</span>
+            <h3>4 条花架、126 株登记紫藤</h3>
+            <p>东段 38 株、中段 42 株、西段 29 株、南区 17 株。西段 9 株为 2024 年补种的“安藤”品种。</p>
+            <span class="stat">测量人：5 号楼 2 单元 王工 · 11 月 6 日</span>
+          </div>
+          <div class="card pick">
+            <span class="kind">阳台种植</span>
+            <h3>37 户参与扦插登记</h3>
+            <p>其中 21 户使用二手泡沫箱，11 户用加仑盆，5 户直接地栽于院内。扦插成活率最高的批次为 9 月 18 日那批。</p>
+            <span class="stat">登记表：物业东门值班室 · 每周五更新</span>
+          </div>
+          <div class="card pick">
+            <span class="kind">土壤与光照</span>
+            <h3>南区土壤 pH 7.2，偏碱</h3>
+            <p>10 月 26 日取样 3 处，平均 pH 7.2，有机质 2.1%。长廊东段树下光照 4.2 小时/日，西段 6.5 小时/日。</p>
+            <span class="stat">检测：社区园艺角 pH 试纸 + 照度计</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 精选内容推荐 -->
+      <section id="picks" aria-labelledby="picks-title">
+        <div class="sec-head">
+          <h2 id="picks-title">本周精选：紫藤花架改造与阳台扦插</h2>
+          <span class="meta">编辑整理 · 11 月 7 日</span>
+        </div>
+        <div class="grid-2">
+          <div class="card pick">
+            <span class="kind">改造记录</span>
+            <h3>3 号楼东侧花架换横杆：14 根镀锌管、2 天工期</h3>
+            <p>原木横杆 2023 年雨季出现劈裂，10 月 30 日拆除，11 月 6 日完成更换。新管直径 25mm，间距 40cm，比原来密 5cm。</p>
+            <span class="stat">参与：物业维修组 3 人 + 住户志愿者 2 人</span>
+          </div>
+          <div class="card pick">
+            <span class="kind">扦插实验</span>
+            <h3>9 月 18 日批次：32 枝活 19 枝</h3>
+            <p>基质为椰糠与珍珠岩 7:3，遮阴 60%。同批中带 2 个芽点的枝条成活 15 枝，单芽点仅 4 枝。</p>
+            <span class="stat">记录人：4 号楼 1 单元 陈姐 · 11 月 3 日复核</span>
+          </div>
+        </div>
+        <div class="img-row">
+          <figure>
+            <img src="https://picsum.photos/seed/wisteria-trellis-118/640/400" width="640" height="400" loading="lazy" alt="三号楼东侧新换的镀锌横杆花架，紫藤枝蔓尚未完全覆盖">
+            <figcaption>3 号楼东侧花架，11 月 6 日更换横杆后。</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/seed/wisteria-cutting-209/640/400" width="640" height="400" loading="lazy" alt="泡沫箱里的紫藤扦插苗，插有手写日期标签">
+            <figcaption>9 月 18 日扦插批次，标签写着“西段-2”。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section id="latest" aria-labelledby="latest-title">
+        <div class="sec-head">
+          <h2 id="latest-title">最新更新：花架检修与借用登记</h2>
+          <span class="meta">滚动记录</span>
+        </div>
+        <ul class="news-list">
+          <li>
+            <time datetime="2026-11-08">11 月 8 日</time>
+            <div><strong>西段防寒布加装完成，覆盖 29 株</strong><span>防寒布为 200g 无纺布，离地 10cm 通风，预计 12 月 5 日复查。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-11-06">11 月 6 日</time>
+            <div><strong>3 号楼东侧花架更换横杆 14 根</strong><span>镀锌管 25mm，间距 40cm，旧木杆集中回收至南区工具房。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-11-04">11 月 4 日</time>
+            <div><strong>工具借用登记表新增 6 件</strong><span>高枝剪 2 把、修枝锯 1 把、pH 试纸 3 盒，借期最长 7 天。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-11-01">11 月 1 日</time>
+            <div><strong>南区堆肥箱第 4 次翻堆</strong><span>温度由 52℃ 降至 38℃，加入干树叶 12kg，含水率约 55%。</span></div>
+          </li>
+          <li>
+            <time datetime="2026-10-28">10 月 28 日</time>
+            <div><strong>10 月修剪统计：累计 84 株</strong><span>东段 26 株、中段 31 株、西段 18 株、南区 9 株，剪除病枝 11 处。</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section id="channels" aria-labelledby="channels-title">
+        <div class="sec-head">
+          <h2 id="channels-title">分类入口：按养护场景找内容</h2>
+          <span class="meta">10 个频道</span>
+        </div>
+        <div class="chan-grid">
+          <a class="chan" href="/#deep"><b>紫藤修剪时间表</b><span>冬剪与花后剪</span></a>
+          <a class="chan" href="/#guide"><b>阳台扦插步骤</b><span>基质与遮阴</span></a>
+          <a class="chan" href="/#guide"><b>花架搭建与加固</b><span>横杆间距</span></a>
+          <a class="chan" href="/#overview"><b>土壤酸碱度调节</b><span>pH 7.2 处理</span></a>
+          <a class="chan" href="/#guide"><b>堆肥翻堆记录</b><span>温度与含水率</span></a>
+          <a class="chan" href="/#latest"><b>工具借用登记</b><span>高枝剪与锯</span></a>
+          <a class="chan" href="/#comments"><b>居民实测反馈</b><span>成活率与吐槽</span></a>
+          <a class="chan" href="/#news"><b>社区绿化通知</b><span>检修与停水</span></a>
+          <a class="chan" href="/#deep"><b>紫藤品种差异</b><span>安藤与多花</span></a>
+          <a class="chan" href="/#tags"><b>防寒布使用</b><span>200g 无纺布</span></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section id="deep" aria-labelledby="deep-title">
+        <div class="sec-head">
+          <h2 id="deep-title">深度解析</h2>
+          <span class="meta">全页唯一长文 · 约 1500 字</span>
+        </div>
+        <article class="deep-article">
+          <h2>横杆加密 5cm，真的能让紫藤少掉枝吗</h2>
+          <p class="byline">基于 3 号楼东侧花架 2023—2026 年的三次改造记录 · 2026-11-08</p>
+
+          <p>3 号楼东侧花架在 2023 年用的是 30mm 木杆，间距 45cm；2026 年 11 月 6 日换成 25mm 镀锌管，间距 40cm。改动不大，但它是目前全小区唯一有连续三年记录的花架，值得单独拆开看。</p>
+
+          <div class="claim">
+            <b>可被反驳的判断：</b>横杆间距从 45cm 缩到 40cm，对减少紫藤“抽干枝”的作用，小于把修剪时间从 3 月提前到 1 月。换句话说，密 5cm 是辅助，改修剪窗口才是主因。
+          </div>
+
+          <h3>案例时间线：三次改造分别在动什么</h3>
+          <ul class="timeline">
+            <li>
+              <time datetime="2023-04-15">2023 年 4 月 15 日</time>
+              <b>初建：30mm 木杆，间距 45cm</b>
+              <p>木杆来自南区旧围栏，未做防腐。当年 8 月暴雨后 6 根横杆出现劈裂。</p>
+            </li>
+            <li>
+              <time datetime="2025-03-22">2025 年 3 月 22 日</time>
+              <b>第一次加固：加斜撑 8 根，间距未变</b>
+              <p>斜撑用 40×40 角钢，横杆仍是木杆。掉枝问题在 2025 年春季仍有 7 处记录。</p>
+            </li>
+            <li>
+              <time datetime="2026-11-06">2026 年 11 月 6 日</time>
+              <b>第二次改造：镀锌管 25mm，间距 40cm</b>
+              <p>同时把冬季修剪从 3 月上旬提前到 1 月中旬，剪除病枝 11 处、交叉枝 19 处。</p>
+            </li>
+          </ul>
+
+          <h3>数据对比：掉枝数量与修剪窗口的关系</h3>
+          <table class="check-table">
+            <caption>3 号楼东侧花架 2024—2026 年春季掉枝记录（现场点数）</caption>
+            <thead>
+              <tr><th>年份</th><th>修剪时间</th><th>横杆间距</th><th>春季掉枝数</th><th>备注</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2024</td><td>3 月 8 日</td><td>45cm</td><td>14 处</td><td>木杆，未加斜撑</td></tr>
+              <tr><td>2025</td><td>3 月 12 日</td><td>45cm</td><td>7 处</td><td>已加斜撑 8 根</td></tr>
+              <tr><td>2026</td><td>1 月 16 日</td><td>40cm</td><td>2 处</td><td>镀锌管 + 提前修剪</td></tr>
+            </tbody>
+          </table>
+          <p>2025 到 2026 年掉枝从 7 处降到 2 处，但这两年同时动了两件事：横杆材质与间距、修剪时间。单看总数无法归因，需要找同年只改了一件事的对照。</p>
+
+          <h3>说法差异：王工与陈姐的分歧点</h3>
+          <p>负责维修的王工认为，镀锌管表面光滑、不藏水，劈裂减少才是主因；4 号楼的陈姐坚持是 1 月修剪让枝条在冻害前完成了伤口愈合。两人都同意“西段 9 株安藤”今年表现最好，但对原因各执一词。</p>
+          <p>可以核对的是：2026 年 1 月 16 日修剪后，1 月 20 日至 2 月 3 日出现连续 5 天最低温 -3℃，剪口未涂抹愈合剂。如果陈姐的判断成立，这 5 天应该造成剪口冻伤；实际记录里只有 1 处剪口回枯，位于西段风口。样本太小，不能下定论。</p>
+
+          <div class="panel">
+            <div class="panel-row">
+              <div class="panel-cell before">
+                <h3>改造前（2025 年）</h3>
+                <p>木杆 30mm，间距 45cm</p>
+                <p>斜撑 8 根，角钢 40×40</p>
+                <p>修剪：3 月 12 日</p>
+                <p>春季掉枝：7 处</p>
+              </div>
+              <div class="panel-cell">
+                <h3>改造后（2026 年）</h3>
+                <p>镀锌管 25mm，间距 40cm</p>
+                <p>斜撑保留 8 根，新增 2 根</p>
+                <p>修剪：1 月 16 日</p>
+                <p>春季掉枝：2 处</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>规则前后变化：修剪窗口提前了 55 天</h3>
+          <p>原来的《长廊养护约定》写的是“3 月上旬完成冬剪”，2026 年 10 月 30 日修订版改为“1 月中旬完成主剪，3 月上旬只做补剪”。修订理由是 2024、2025 两年 3 月修剪后一周内均遇倒春寒，剪口回枯累计 9 处。</p>
+          <p>修订版同时规定：直径超过 2cm 的剪口必须涂愈合剂，西段风口位置延后到 2 月初。这条在 11 月 6 日的改造中已执行，现场可见 3 处涂抹痕迹。</p>
+
+          <h3>把判断拆成可核对的结构</h3>
+          <table class="check-table">
+            <caption>判断“提前修剪比加密横杆更重要”的核对清单</caption>
+            <thead>
+              <tr><th>核对项</th><th>数据来源</th><th>当前结果</th><th>能否支持判断</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2025 年只加斜撑，掉枝 7 处</td><td>物业维修记录</td><td>支持结构加固作用有限</td><td>部分支持</td></tr>
+              <tr><td>2026 年修剪提前 55 天</td><td>养护约定修订版</td><td>时间明确</td><td>支持</td></tr>
+              <tr><td>2026 年横杆同时加密</td><td>11 月 6 日施工单</td><td>混杂变量</td><td>削弱归因</td></tr>
+              <tr><td>西段风口剪口回枯 1 处</td><td>11 月 3 日复核</td><td>样本不足</td><td>暂不成立</td></tr>
+            </tbody>
+          </table>
+          <p>结论只能到“倾向”这一层：修剪窗口提前有 2024、2025 两年倒春寒的对照支撑，加密横杆目前只有 2026 年一次数据。若 2027 年春季掉枝仍在 3 处以内，这个判断才更站得住。社区园艺角计划在 12 月 20 日做一次枝条解剖，看剪口愈合组织厚度。</p>
+        </article>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section id="guide" aria-labelledby="guide-title">
+        <div class="sec-head">
+          <h2 id="guide-title">体验指南：第一次参加养护日怎么走</h2>
+          <span class="meta">适用于 11 月至 12 月</span>
+        </div>
+        <ol class="guide-steps">
+          <li>
+            <b>先在物业东门登记，领一张养护卡</b>
+            <p>登记时间为每周三 17:30—18:30，卡上印有负责的花架编号。11 月 4 日那场共发出 14 张卡。</p>
+          </li>
+          <li>
+            <b>到南区工具房借工具，按编号归还</b>
+            <p>高枝剪 2 把、修枝锯 1 把、pH 试纸 3 盒。借期最长 7 天，超期会在公告栏点名。</p>
+          </li>
+          <li>
+            <b>跟着当周任务单做，不要自行扩大修剪量</b>
+            <p>11 月任务单只允许剪除病枝、交叉枝和枯枝，主蔓一律不动。上周有住户剪掉 3 米主蔓，已在内网通报。</p>
+          </li>
+          <li>
+            <b>把剪下的枝条送到南区堆肥箱，称重记录</b>
+            <p>11 月 1 日翻堆加入干树叶 12kg，含水率控制在 55% 左右，温度降到 38℃ 后进入二次发酵。</p>
+          </li>
+          <li>
+            <b>回家前在值班室更新台账</b>
+            <p>写清株号、处理内容、时间。11 月 6 日的施工单就是按这套格式填的，共 4 页。</p>
+          </li>
+        </ol>
+        <div class="quote-card">
+          <p>“别一上来就买大盆。我用 5 加仑盆扦插，9 月 18 日那批 32 枝只活 19 枝；同批放泡沫箱的反倒活了 11 枝。”</p>
+          <cite>—— 4 号楼 1 单元 陈姐，11 月 3 日复核时口述</cite>
+        </div>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section id="faq" aria-labelledby="faq-title">
+        <div class="sec-head">
+          <h2 id="faq-title">常见问题</h2>
+          <span class="meta">8 个高频疑问</span>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>紫藤为什么三年不开花，是品种问题还是修剪问题？</summary>
+            <p>先查品种和嫁接方式。南区 17 株里有 5 株是实生苗，实生紫藤通常要 6—8 年才开花；嫁接苗一般 3 年可见花。再看修剪：8 月后重剪会剪掉花芽，西段 2024 年 9 月剪过一次，次年花量减少约四成。</p>
+          </details>
+          <details>
+            <summary>花架横杆间距多少合适，25mm 镀锌管够不够承重？</summary>
+            <p>3 号楼东侧用 25mm 镀锌管、间距 40cm，单跨 2.4 米，加斜撑后可承住 3 年生主蔓。若跨度超过 3 米，建议加到 32mm 管，或在中间加立柱。11 月 6 日的施工单标注了每跨的实测挠度。</p>
+          </details>
+          <details>
+            <summary>阳台紫藤用多大盆，椰糠和园土怎么配？</summary>
+            <p>成年紫藤根系很霸道，阳台至少 15 加仑盆或 40cm 深的种植箱。扦插阶段用椰糠:珍珠岩 7:3 即可，移栽时掺 30% 园土和少量腐熟堆肥。9 月 18 日批次里，纯椰糠的成活率反而高于掺园土组。</p>
+          </details>
+          <details>
+            <summary>南区土壤 pH 7.2，需要调酸吗，用什么材料？</summary>
+            <p>紫藤耐 pH 6.0—7.5，7.2 在可接受范围，不必大改。若要微调，可在 3 月每平方米撒 80—100g 硫磺粉，或浇稀释 1:50 的硫酸亚铁。10 月 26 日取样后，园艺角只建议东段做小范围试验，避免全园同时改土。</p>
+          </details>
+          <details>
+            <summary>冬天防寒布什么时候盖、什么时候揭？</summary>
+            <p>夜间最低温连续 3 天低于 5℃ 时盖，11 月 8 日西段已执行；揭布时间看 3 月上旬，日均温稳定过 10℃ 后分两次揭开。200g 无纺布离地留 10cm 通风口，不要整株包死。</p>
+          </details>
+          <details>
+            <summary>堆肥箱温度多少算正常，出现异味怎么处理？</summary>
+            <p>55—65℃ 是高温期，11 月 1 日翻堆时 52℃，加干树叶 12kg 后降到 38℃，属正常回落。若有酸臭味，多为含水率过高，翻堆并加入干料，把含水率压到 50%—55%。</p>
+          </details>
+          <details>
+            <summary>工具借用超期会怎样，押金怎么算？</summary>
+            <p>借期 7 天，超期会在公告栏和楼道群点名，连续两次超期暂停借用一个月。目前不收押金，凭养护卡登记即可；高枝剪和修枝锯需要登记门牌号。</p>
+          </details>
+          <details>
+            <summary>住户外地出差，紫藤一个月没人浇水能撑住吗？</summary>
+            <p>地栽成年株一般能撑 3—4 周，盆栽不行。可提前把盆移到北侧遮阴，铺 5cm 覆盖物，并请邻居在养护卡上代签。11 月已有 6 户使用代管登记，最长代管 22 天。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section id="comments" aria-labelledby="comments-title">
+        <div class="sec-head">
+          <h2 id="comments-title">居民评论</h2>
+          <span class="meta">截至 11 月 8 日 · 23 条</span>
+        </div>
+        <div class="comment-list">
+          <div class="comment">
+            <div class="who"><b>5 号楼 2 单元 王工</b><span>11 月 7 日 21:14</span></div>
+            <p>镀锌管换完我去摇了摇，最后一跨还是有点晃，建议 12 月再加一根立柱，位置在 2.4 米跨中。</p>
+            <span class="ref">指向：3 号楼东侧花架</span>
+          </div>
+          <div class="comment">
+            <div class="who"><b>4 号楼 1 单元 陈姐</b><span>11 月 7 日 19:02</span></div>
+            <p>泡沫箱扦插那 11 枝我数过，其实有 2 枝是后面补插的，严格算成活率没那么高。台账最好分开记。</p>
+            <span class="ref">指向：9 月 18 日扦插批次</span>
+          </div>
+          <div class="comment">
+            <div class="who"><b>匿名住户</b><span>11 月 6 日 23:40</span></div>
+            <p>修剪任务单能不能提前两天发？每次周三下班才看到，工具房已经锁门。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><b>2 号楼 3 单元 老周</b><span>11 月 5 日 08:12</span></div>
+            <p>西段防寒布盖得挺整齐，就是东段那几株没盖，风一吹差得明显。都是紫藤，待遇不一样。</p>
+            <span class="ref">指向：长廊西段防寒布</span>
+          </div>
+          <div class="comment">
+            <div class="who"><b>6 号楼 1 单元 小林</b><span>11 月 4 日 17:55</span></div>
+            <p>按指南第 3 步只剪病枝，结果邻居说我剪太狠。任务单能不能贴个图，标清楚哪几根算病枝。</p>
+            <span class="ref">指向：11 月修剪任务单</span>
+          </div>
+          <div class="comment">
+            <div class="who"><b>3 号楼 2 单元 阿敏</b><span>11 月 3 日 12:30</span></div>
+            <p>pH 7.2 我觉得不用调，前年撒硫磺粉那块地，第二年反而长得慢。数据可以再攒一年。</p>
+            <span class="ref">指向：南区土壤 pH 检测</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section id="news" aria-labelledby="news-title">
+        <div class="sec-head">
+          <h2 id="news-title">相关资讯与通知</h2>
+          <span class="meta">来源：社区公告栏、物业内网</span>
+        </div>
+        <div class="news-grid">
+          <div class="news-card">
+            <h3>11 月 12 日停水半天，工具房暂停借用</h3>
+            <p>物业通知：11 月 12 日 08:00—12:00 检修加压泵，南区工具房同步关闭，借还顺延一天。</p>
+            <span class="src">来源：物业内网 11 月 5 日</span>
+          </div>
+          <div class="news-card">
+            <h3>冬季修剪培训班开放 20 个名额</h3>
+            <p>12 月 6 日上午 9 点在长廊东段集合，由 5 号楼王工带教，内容包括剪口处理和愈合剂涂抹。</p>
+            <span class="src">来源：社区公告栏 11 月 3 日</span>
+          </div>
+          <div class="news-card">
+            <h3>堆肥箱第 4 次翻堆完成</h3>
+            <p>11 月 1 日完成翻堆，温度 38℃，计划 11 月 15 日做第 5 次，需 3 名志愿者。</p>
+            <span class="src">来源：园艺角记录 11 月 1 日</span>
+          </div>
+          <div class="news-card">
+            <h3>《长廊养护约定》修订版生效</h3>
+            <p>10 月 30 日修订版规定冬剪提前至 1 月中旬，直径超 2cm 剪口必须涂愈合剂。</p>
+            <span class="src">来源：物业办公室 10 月 30 日</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section id="tags" aria-labelledby="tags-title">
+        <div class="sec-head">
+          <h2 id="tags-title">相关推荐标签</h2>
+          <span class="meta">按需求找条目</span>
+        </div>
+        <div class="tag-cloud">
+          <a class="tag" href="/#deep">紫藤冬剪时间表</a>
+          <a class="tag" href="/#guide">阳台紫藤扦插成活率</a>
+          <a class="tag" href="/#deep">镀锌管花架横杆间距</a>
+          <a class="tag" href="/#overview">紫藤土壤 pH 调节</a>
+          <a class="tag" href="/#guide">紫藤堆肥翻堆温度</a>
+          <a class="tag" href="/#latest">高枝剪借用登记</a>
+          <a class="tag" href="/#guide">紫藤防寒布几度盖</a>
+          <a class="tag" href="/#faq">紫藤三年不开花原因</a>
+          <a class="tag" href="/#comments">居民养护实测反馈</a>
+          <a class="tag" href="/#news">社区绿化检修通知</a>
+        </div>
+        <p class="tiny" style="margin-top:12px;">示例数据说明：株数、温度、成活率为 2026 年 10—11 月现场记录与住户登记整理，站点不提供线上交易与预约功能，工具借用需到物业东门值班室办理。</p>
+      </section>
+
+      <!-- 11 补充板块：可信度分层 -->
+      <section id="rank" aria-labelledby="rank-title">
+        <div class="sec-head">
+          <h2 id="rank-title">条目可信度分层</h2>
+          <span class="meta">11 月 8 日整理</span>
+        </div>
+        <p class="sec-sub">同一批花园条目按取证方式分层，便于判断哪条能直接照着做。</p>
+        <ol class="rank-list">
+          <li><b>3 号楼东侧花架更换横杆 14 根</b><span class="num">施工单 + 照片</span></li>
+          <li><b>西段防寒布 11 月 8 日加装完成</b><span class="num">现场点数 + 值班记录</span></li>
+          <li><b>9 月 18 日扦插批次 32 枝活 19 枝</b><span class="num">住户台账，未双人复核</span></li>
+          <li><b>南区土壤 pH 7.2</b><span class="num">试纸自测，单次取样</span></li>
+          <li><b>修剪提前与掉枝减少的因果关系</b><span class="num">存在混杂变量，待 2027 年验证</span></li>
+        </ol>
+      </section>
+
+    </div>
+
+    <aside class="aside" aria-label="侧栏">
+      <div class="box">
+        <h2>本页导航</h2>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">紫藤长廊现状</a></li>
+          <li><a href="/#picks">本周精选</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">居民评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#tags">相关推荐</a></li>
+          <li><a href="/#rank">可信度分层</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h2>站内查找</h2>
+        <p class="tip">输入“花架”“扦插”“堆肥”“防寒布”等词，可定位到对应板块。</p>
+        <p class="search-result" id="searchResult" aria-live="polite"></p>
+        <ul class="search-hit-list" id="searchHits"></ul>
+      </div>
+      <div class="box">
+        <h2>本周任务</h2>
+        <p class="tip"><b>11 月 9 日 09:00</b> 长廊东段补剪病枝，需 4 人。</p>
+        <p class="tip"><b>11 月 12 日</b> 停水，工具房关闭，借还顺延。</p>
+        <p class="tip"><b>11 月 15 日</b> 堆肥箱第 5 次翻堆，需 3 名志愿者。</p>
+      </div>
+      <div class="box">
+        <h2>数据说明</h2>
+        <p class="tip">株数、温度、成活率来自 2026 年 10 月至 11 月的现场记录与住户登记，属示例性整理，不作专业栽培依据。</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">
+        <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#7c5cab"/>
+          <path d="M20 50c0-13 6-21 12-27 6 6 12 14 12 27" fill="none" stroke="#e9d5ff" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="24" cy="31" r="3" fill="#ffe0b8"/>
+          <circle cx="32" cy="24" r="3" fill="#ffe0b8"/>
+          <circle cx="40" cy="31" r="3" fill="#ffe0b8"/>
+        </svg>
+        <span class="brand-name">紫藤家园sp</span>
+      </div>
+      <p>记录公共花架与阳台种植的现场数据，把修剪、堆肥、借还工具这些琐事留下可查的痕迹。</p>
+      <p>更新时间：2026 年 11 月 8 日，对应“西段防寒布加装完成”与“横杆更换 14 根”两条正文更新项。</p>
+    </div>
+    <div>
+      <h2>养护栏目</h2>
+      <ul class="foot-links">
+        <li><a href="/#overview">长廊与花架现状</a></li>
+        <li><a href="/#deep">紫藤修剪时间表</a></li>
+        <li><a href="/#guide">阳台扦插步骤</a></li>
+        <li><a href="/#guide">堆肥翻堆记录</a></li>
+        <li><a href="/#faq">土壤酸碱度调节</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>社区栏目</h2>
+      <ul class="foot-links">
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#comments">居民评论</a></li>
+        <li><a href="/#news">绿化通知</a></li>
+        <li><a href="/#rank">可信度分层</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 紫藤家园sp · 社区园艺记录</span>
+    <span>示例数据说明：文中株数、温度、成活率为现场记录整理，仅供住户参考。</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=900){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+    window.addEventListener('resize',function(){
+      if(window.innerWidth>900){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY>500){toTop.classList.add('show');}
+    else{toTop.classList.remove('show');}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var sections=['overview','picks','latest','channels','deep','guide','faq','comments','news','tags','rank'];
+  var links={};
+  document.querySelectorAll('#sideNav a').forEach(function(a){
+    var id=a.getAttribute('href').replace('/#','');
+    links[id]=a;
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          Object.keys(links).forEach(function(k){links[k].classList.remove('active');});
+          if(links[en.target.id]){links[en.target.id].classList.add('active');}
+        }
+      });
+    },{rootMargin:'-120px 0px -60% 0px',threshold:0});
+    sections.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el){io.observe(el);}
+    });
+  }
+
+  var index=[
+    {id:'overview',title:'紫藤长廊与楼栋花架现状',keys:'概览 现状 株数 花架 长廊 土壤 光照'},
+    {id:'picks',title:'本周精选：花架改造与阳台扦插',keys:'精选 推荐 改造 扦插 成活率 横杆'},
+    {id:'latest',title:'最新更新：花架检修与借用登记',keys:'最新 更新 检修 工具 借用 翻堆 修剪'},
+    {id:'channels',title:'分类入口：按养护场景找内容',keys:'分类 频道 入口 修剪 扦插 堆肥 防寒布'},
+    {id:'deep',title:'深度解析：横杆加密与修剪窗口',keys:'深度 解析 判断 时间线 数据 对比 修剪 横杆'},
+    {id:'guide',title:'体验指南：养护日流程',keys:'指南 步骤 登记 工具 任务单 堆肥'},
+    {id:'faq',title:'常见问题：紫藤不开花、盆土、防寒',keys:'常见问题 faq 不开花 土壤 盆 防寒布 堆肥 工具 浇水'},
+    {id:'comments',title:'居民评论与实测反馈',keys:'评论 反馈 居民 吐槽 实测'},
+    {id:'news',title:'相关资讯与通知',keys:'资讯 通知 停水 培训 翻堆 养护约定'},
+    {id:'tags',title:'相关推荐标签',keys:'标签 推荐 相关'},
+    {id:'rank',title:'条目可信度分层',keys:'可信度 分层 榜单 核对'}
+  ];
+
+  var input=document.getElementById('siteSearch');
+  var btn=document.getElementById('searchBtn');
+  var result=document.getElementById('searchResult');
+  var hits=document.getElementById('searchHits');
+
+  function doSearch(){
+    var q=(input.value||'').trim();
+    hits.innerHTML='';
+    if(!q){
+      result.textContent='请输入关键词后再查找。';
+      result.className='search-result';
+      return;
+    }
+    var found=index.filter(function(item){
+      return (item.title+item.keys).indexOf(q)!==-1;
+    });
+    if(found.length===0){
+      result.textContent='没有找到与“'+q+'”相关的板块，试试“花架”“扦插”“堆肥”“防寒布”。';
+      result.className='search-result miss';
+      return;
+    }
+    result.textContent='找到 '+found.length+' 个板块，点击可跳转：';
+    result.className='search-result hit';
+    found.forEach(function(item){
+      var li=document.createElement('li');
+      var a=document.createElement('a');
+      a.href='/#';
+      a.textContent=item.title;
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        var target=document.getElementById(item.id);
+        if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
+      });
+      li.appendChild(a);
+      hits.appendChild(li);
+    });
+  }
+  btn.addEventListener('click',doSearch);
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){e.preventDefault();doSearch();}
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "紫藤家园sp",
+  "description": "记录社区园艺、紫藤长廊养护与阳台种植的现场数据与住户经验。",
+  "inLanguage": "zh-CN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "紫藤为什么三年不开花，是品种问题还是修剪问题？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先查品种和嫁接方式。实生苗通常要 6—8 年才开花，嫁接苗一般 3 年可见花。再看修剪：8 月后重剪会剪掉花芽，西段 2024 年 9 月剪过一次，次年花量减少约四成。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "花架横杆间距多少合适，25mm 镀锌管够不够承重？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3 号楼东侧用 25mm 镀锌管、间距 40cm，单跨 2.4 米，加斜撑后可承住 3 年生主蔓。若跨度超过 3 米，建议加到 32mm 管，或在中间加立柱。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "阳台紫藤用多大盆，椰糠和园土怎么配？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "成年紫藤至少 15 加仑盆或 40cm 深的种植箱。扦插阶段用椰糠:珍珠岩 7:3，移栽时掺 30% 园土和少量腐熟堆肥。9 月 18 日批次里，纯椰糠的成活率高于掺园土组。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "南区土壤 pH 7.2，需要调酸吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "紫藤耐 pH 6.0—7.5，7.2 在可接受范围。若要微调，可在 3 月每平方米撒 80—100g 硫磺粉，或浇稀释 1:50 的硫酸亚铁，建议先做小范围试验。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "冬天防寒布什么时候盖、什么时候揭？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "夜间最低温连续 3 天低于 5℃ 时盖，11 月 8 日西段已执行；揭布看 3 月上旬，日均温稳定过 10℃ 后分两次揭开。200g 无纺布离地留 10cm 通风口。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "堆肥箱温度多少算正常，出现异味怎么处理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "55—65℃ 是高温期，11 月 1 日翻堆时 52℃，加干树叶 12kg 后降到 38℃，属正常回落。若有酸臭味，翻堆并加入干料，把含水率压到 50%—55%。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工具借用超期会怎样，押金怎么算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "借期 7 天，超期会在公告栏和楼道群点名，连续两次超期暂停借用一个月。目前不收押金，凭养护卡登记即可。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "住户外地出差，紫藤一个月没人浇水能撑住吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "地栽成年株一般能撑 3—4 周，盆栽不行。可提前把盆移到北侧遮阴，铺 5cm 覆盖物，并请邻居在养护卡上代签。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+  </html>
