@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>r星今日大赛官网-赛事日程与观赛指南</title>
+<meta name="description" content="r星今日大赛官网汇总赛事日程、赛道规则与参赛名单，提供观赛入口、成绩查询与选手访谈，按日期与赛区整理，方便观众找到当天开赛项目与直播时间。">
+<meta name="keywords" content="r星今日大赛官网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23161b2b'/%3E%3Cpath d='M16 5l3 8h8l-6.5 5 2.5 8-7-5-7 5 2.5-8L5 13h8z' fill='%23f4b942'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"r星今日大赛官网","inLanguage":"zh-CN","description":"赛事日程、规则与观赛信息汇总"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"今日大赛的直播从几点开始？","acceptedAnswer":{"@type":"Answer","text":"11月8日当天分三个时段开赛：13:30城市竞速预选、16:00团队突袭八强、19:30决赛阶段。日程表按赛区标注，直播间在开赛前15分钟开放。"}},
+{"@type":"Question","name":"R星今日大赛官网的参赛资格怎么确认？","acceptedAnswer":{"@type":"Answer","text":"需持有当季通行证并在报名页提交队伍名单，名单在赛前48小时锁定。11月6日之后提交的替换申请只接受医疗与设备故障两类理由。"}},
+{"@type":"Question","name":"成绩与回放多久内公布？","acceptedAnswer":{"@type":"Answer","text":"单场结束后10分钟内更新比分，完整回放于当晚23:00前上传。申诉窗口为成绩公布后2小时。"}},
+{"@type":"Question","name":"赛道地图每周会更换吗？","acceptedAnswer":{"@type":"Answer","text":"竞速类地图按赛季轮换，当前赛季为7张地图循环，11月8日使用港口环线与山谷夜路两张。突袭模式地图池保持6张不变。"}},
+{"@type":"Question","name":"现场观众需要提前多久入场？","acceptedAnswer":{"@type":"Answer","text":"建议开赛前40分钟到场，19:30决赛场次18:40开放检票。持电子票与身份证件走B口，物品寄存处在A口内侧。"}},
+{"@type":"Question","name":"转播画面可以二次剪辑吗？","acceptedAnswer":{"@type":"Answer","text":"非商业用途的剪辑片段允许发布，需保留赛事水印并在简介标注场次编号；商业用途需在比赛结束7天内提交授权申请。"}}
+]}
+</script>
+<style>
+:root{
+  --ink:#161b2b;
+  --ink-2:#2a3147;
+  --muted:#5c6479;
+  --line:#e2e5ee;
+  --paper:#f6f7fb;
+  --white:#ffffff;
+  --brand:#1f3a8a;
+  --brand-soft:#e8eefc;
+  --accent:#c2410c;
+  --accent-soft:#fdf0e7;
+  --gold:#f4b942;
+  --green:#0f766e;
+  --radius-s:8px;
+  --radius-m:14px;
+  --radius-l:22px;
+  --shadow-s:0 1px 2px rgba(22,27,43,.06);
+  --shadow-m:0 6px 20px rgba(22,27,43,.08);
+  --sp-1:6px;--sp-2:12px;--sp-3:20px;--sp-4:32px;--sp-5:52px;
+  --fs-xs:.78rem;--fs-s:.9rem;--fs-m:1rem;--fs-l:1.18rem;--fs-xl:1.5rem;--fs-2xl:2rem;--fs-hero:2.75rem;
+  --sticky:96px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--ink);background:var(--paper);line-height:1.78;font-size:var(--fs-m);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{list-style:none}
+h1,h2,h3{line-height:1.3;font-weight:700;color:var(--ink)}
+[id]{scroll-margin-top:var(--sticky)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--sp-3)}
+
+/* ===== 公告条 ===== */
+.announce{
+  position:sticky;top:0;z-index:60;background:var(--ink);color:#e9ecf5;
+  font-size:var(--fs-s);border-bottom:1px solid #000;
+}
+.announce .wrap{display:flex;align-items:center;gap:var(--sp-2);min-height:42px;flex-wrap:wrap}
+.announce .badge{
+  background:var(--accent);color:#fff;padding:2px 9px;border-radius:99px;
+  font-size:var(--fs-xs);letter-spacing:.02em;white-space:nowrap;font-weight:600;
+}
+.announce a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+
+/* ===== 页头 ===== */
+.site-head{
+  position:sticky;top:42px;z-index:55;background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:var(--shadow-s);
+}
+.head-inner{display:flex;align-items:center;gap:var(--sp-3);min-height:54px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.06rem;color:var(--ink);letter-spacing:-.01em}
+.brand:hover{text-decoration:none}
+.brand svg{flex:none}
+.nav{display:flex;gap:2px;flex-wrap:wrap;flex:1;justify-content:flex-start}
+.nav a{
+  color:var(--ink-2);font-size:var(--fs-s);padding:8px 11px;border-radius:var(--radius-s);
+  transition:background .18s;
+}
+.nav a:hover{background:var(--brand-soft);color:var(--brand);text-decoration:none}
+.head-tools{display:flex;align-items:center;gap:var(--sp-2)}
+.menu-btn{
+  display:none;background:var(--brand-soft);border:1px solid #cdd8f5;color:var(--brand);
+  border-radius:var(--radius-s);padding:8px 14px;font-size:var(--fs-s);font-weight:600;cursor:pointer;
+}
+.menu-btn:focus-visible,.nav a:focus-visible,.search input:focus-visible,.go-top:focus-visible,
+button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.search{position:relative;display:flex;align-items:center}
+.search input{
+  width:186px;padding:7px 34px 7px 12px;border:1px solid var(--line);border-radius:99px;
+  font-size:var(--fs-s);background:var(--paper);color:var(--ink);font-family:inherit;
+}
+.search input::placeholder{color:#94a0b8}
+.search button{
+  position:absolute;right:4px;border:0;background:var(--brand);color:#fff;border-radius:99px;
+  width:26px;height:26px;display:grid;place-items:center;cursor:pointer;font-size:.8rem;
+}
+.search-result{
+  position:absolute;top:calc(100% + 8px);right:0;width:min(340px,86vw);background:#fff;
+  border:1px solid var(--line);border-radius:var(--radius-m);box-shadow:var(--shadow-m);
+  padding:8px;display:none;max-height:320px;overflow:auto;z-index:70;
+}
+.search-result.on{display:block}
+.search-result li a{display:block;padding:8px 10px;border-radius:var(--radius-s);font-size:var(--fs-s);color:var(--ink-2)}
+.search-result li a:hover{background:var(--brand-soft);text-decoration:none}
+.search-result .none{padding:12px 10px;font-size:var(--fs-s);color:var(--muted)}
+.search-result mark{background:#fde9a9;color:var(--ink);border-radius:3px;padding:0 1px}
+
+/* ===== 首屏 ===== */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#0e1430 0%,#1f3a8a 62%,#2f4fa8 100%);color:#eef2ff}
+.hero .wrap{position:relative;z-index:2;padding-top:var(--sp-5);padding-bottom:var(--sp-5);display:grid;gap:var(--sp-4);grid-template-columns:1.15fr .85fr;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(244,185,66,.45);padding:4px 12px;border-radius:99px}
+.hero h1{font-size:var(--fs-hero);color:#fff;margin:var(--sp-3) 0 var(--sp-2);letter-spacing:-.02em}
+.hero p{color:#c8d2f0;font-size:1.02rem;max-width:34em}
+.hero-cta{display:flex;gap:var(--sp-2);flex-wrap:wrap;margin-top:var(--sp-3)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:99px;font-weight:600;font-size:var(--fs-s);transition:transform .18s,box-shadow .18s}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--gold);color:#22180a;box-shadow:0 8px 22px rgba(244,185,66,.28)}
+.btn-ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.hero-stats{display:flex;gap:var(--sp-4);margin-top:var(--sp-4);flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:1.5rem;color:#fff;font-variant-numeric:tabular-nums}
+.hero-stats div span{font-size:var(--fs-xs);color:#a9b6dc;letter-spacing:.06em}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(0,0,0,.35))}
+.hero-art .cap{font-size:var(--fs-xs);color:#a9b6dc;margin-top:10px;text-align:right;letter-spacing:.04em}
+
+/* ===== 主内容布局 ===== */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 306px;gap:var(--sp-4);padding:var(--sp-5) 0}
+.main-col{display:flex;flex-direction:column;gap:var(--sp-4);min-width:0}
+.side-col{display:flex;flex-direction:column;gap:var(--sp-3)}
+
+/* ===== 板块通用 ===== */
+.sec{background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);padding:var(--sp-4);box-shadow:var(--shadow-s)}
+.sec > h2{font-size:var(--fs-xl);display:flex;align-items:center;gap:10px;margin-bottom:var(--sp-1)}
+.sec > h2::before{content:"";width:6px;height:22px;border-radius:3px;background:var(--brand);flex:none}
+.sec .lead{color:var(--muted);font-size:var(--fs-s);margin-bottom:var(--sp-3)}
+.sec h3{font-size:var(--fs-l);margin:var(--sp-3) 0 var(--sp-1)}
+
+/* 概览网格 */
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)}
+.overview-card{border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-3);background:var(--paper);transition:transform .18s,box-shadow .18s}
+.overview-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m)}
+.overview-card .k{font-size:var(--fs-xs);color:var(--brand);font-weight:700;letter-spacing:.08em}
+.overview-card h3{font-size:1.02rem;margin:6px 0 6px}
+.overview-card p{font-size:var(--fs-s);color:var(--muted)}
+.overview-card .n{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink)}
+
+/* 精选卡 */
+.feature{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--sp-3);align-items:stretch}
+.feature-main{position:relative;border-radius:var(--radius-m);overflow:hidden;background:var(--ink);color:#fff;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--sp-3)}
+.feature-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.feature-main > *{position:relative;z-index:2}
+.feature-main .tag{background:var(--accent);color:#fff;font-size:var(--fs-xs);padding:3px 10px;border-radius:99px;align-self:flex-start;font-weight:600}
+.feature-main h3{color:#fff;font-size:var(--fs-l);margin:10px 0 6px}
+.feature-main p{font-size:var(--fs-s);color:#dbe2f5}
+.feature-list{display:flex;flex-direction:column;gap:var(--sp-2)}
+.feature-list li{border-bottom:1px dashed var(--line);padding-bottom:var(--sp-2)}
+.feature-list li:last-child{border-bottom:0;padding-bottom:0}
+.feature-list .t{font-weight:600;font-size:var(--fs-s);color:var(--ink)}
+.feature-list .m{font-size:var(--fs-xs);color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* 紧凑列表 */
+.timeline{display:flex;flex-direction:column}
+.timeline li{display:grid;grid-template-columns:78px 1fr auto;gap:var(--sp-2);align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
+.timeline li:last-child{border-bottom:0}
+.timeline .time{font-weight:700;font-variant-numeric:tabular-nums;color:var(--brand);font-size:var(--fs-s)}
+.timeline .desc strong{display:block;font-size:var(--fs-s);color:var(--ink)}
+.timeline .desc span{font-size:var(--fs-xs);color:var(--muted)}
+.timeline .state{font-size:var(--fs-xs);color:var(--green);border:1px solid #bce5df;background:#ecfdf9;border-radius:99px;padding:2px 10px;white-space:nowrap}
+.timeline .state.soon{color:var(--accent);border-color:#f6d3bd;background:var(--accent-soft)}
+
+/* 分类标签索引 */
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chips a{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:99px;background:var(--paper);border:1px solid var(--line);font-size:var(--fs-s);color:var(--ink-2);transition:background .16s,border-color .16s}
+.chips a:hover{background:var(--brand-soft);border-color:#c4d3f7;text-decoration:none;color:var(--brand)}
+.chips a .c{font-size:var(--fs-xs);color:var(--muted)}
+.chips a:hover .c{color:var(--brand)}
+
+/* 深度解析分栏 */
+.deep{background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);padding:var(--sp-4);box-shadow:var(--shadow-s)}
+.deep > h2{font-size:var(--fs-xl);margin-bottom:var(--sp-1)}
+.deep > h2::before{content:"";display:inline-block;width:6px;height:22px;border-radius:3px;background:var(--accent);margin-right:10px;vertical-align:-3px}
+.deep .standfirst{color:var(--muted);font-size:var(--fs-s);margin-bottom:var(--sp-3);border-left:3px solid var(--gold);padding-left:var(--sp-2)}
+.deep h3{font-size:var(--fs-l);margin-top:var(--sp-4)}
+.deep p{margin-bottom:var(--sp-2)}
+.deep .cols{column-count:2;column-gap:var(--sp-4)}
+.deep .cols p{break-inside:avoid-column}
+.verdict{background:var(--accent-soft);border:1px solid #f3d5c2;border-radius:var(--radius-m);padding:var(--sp-3);margin:var(--sp-3) 0}
+.verdict .lbl{font-size:var(--fs-xs);font-weight:700;color:var(--accent);letter-spacing:.1em}
+.verdict p{margin:4px 0 0;font-size:var(--fs-s);color:var(--ink-2)}
+.check{display:grid;grid-template-columns:auto 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;margin:var(--sp-3) 0}
+.check > div{padding:11px 14px;border-bottom:1px solid var(--line);font-size:var(--fs-s)}
+.check > div:nth-child(odd){background:var(--paper);font-weight:600;color:var(--ink-2);width:38%}
+.check > div:nth-last-child(-n+2){border-bottom:0}
+.factline{font-size:var(--fs-s);color:var(--muted);border-bottom:1px dotted var(--line);padding-bottom:8px}
+
+/* 步骤 */
+.steps{counter-reset:st;display:grid;gap:var(--sp-2)}
+.steps li{counter-increment:st;display:grid;grid-template-columns:38px 1fr;gap:var(--sp-2);align-items:start}
+.steps li::before{content:counter(st,decimal-leading-zero);font-weight:800;font-size:1.1rem;color:var(--brand);background:var(--brand-soft);border-radius:var(--radius-s);width:38px;height:38px;display:grid;place-items:center;font-variant-numeric:tabular-nums}
+.steps .s-title{font-weight:700;font-size:var(--fs-s)}
+.steps p{font-size:var(--fs-s);color:var(--muted)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden}
+.compare > div{padding:var(--sp-3)}
+.compare .a{background:var(--brand-soft)}
+.compare .b{background:var(--accent-soft);border-left:1px solid var(--line)}
+.compare h4,.compare .cmp-h{font-size:var(--fs-s);font-weight:700;letter-spacing:.03em;margin-bottom:8px}
+.compare ul{font-size:var(--fs-s);color:var(--ink-2);display:grid;gap:6px}
+.compare li::before{content:"·";color:var(--brand);font-weight:900;margin-right:6px}
+
+/* 问答 */
+.faq details{border:1px solid var(--line);border-radius:var(--radius-m);padding:0;margin-bottom:9px;background:#fff;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:13px 16px;font-weight:600;font-size:var(--fs-s);display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--ink-2)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.2rem;color:var(--brand);line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details[open] summary{border-bottom:1px solid var(--line);background:var(--paper)}
+.faq .ans{padding:12px 16px;font-size:var(--fs-s);color:var(--muted)}
+.faq .ans p+p{margin-top:6px}
+
+/* 评论 */
+.reviews{display:grid;gap:var(--sp-2)}
+.review{border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-3);background:#fff}
+.review .who{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:700;font-size:var(--fs-s);flex:none}
+.review .who .nm{font-weight:700;font-size:var(--fs-s)}
+.review .who .mt{font-size:var(--fs-xs);color:var(--muted)}
+.review p{font-size:var(--fs-s);color:var(--ink-2)}
+.review .stars{color:var(--gold);font-size:var(--fs-xs);letter-spacing:2px}
+
+/* 资讯列表 */
+.newslist{display:grid;gap:var(--sp-2)}
+.newslist li{display:grid;grid-template-columns:1fr auto;gap:var(--sp-2);padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.newslist li:last-child{border-bottom:0;padding-bottom:0}
+.newslist .ttl{font-size:var(--fs-s);font-weight:600;color:var(--ink)}
+.newslist .ttl:hover{color:var(--brand)}
+.newslist .mt{font-size:var(--fs-xs);color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* 推荐标签 */
+.tagwall{display:flex;flex-wrap:wrap;gap:8px}
+.tagwall a{padding:6px 12px;border:1px dashed #c9d4ee;background:#fff;border-radius:var(--radius-s);font-size:var(--fs-s);color:var(--ink-2)}
+.tagwall a:hover{border-style:solid;border-color:var(--brand);color:var(--brand);text-decoration:none;background:var(--brand-soft)}
+
+/* 榜单 */
+.rank{counter-reset:rk;display:grid;gap:2px}
+.rank li{counter-increment:rk;display:grid;grid-template-columns:30px 1fr auto;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);align-items:center;font-size:var(--fs-s)}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(rk);width:24px;height:24px;border-radius:50%;background:var(--paper);color:var(--muted);display:grid;place-items:center;font-size:var(--fs-xs);font-weight:700}
+.rank li:nth-child(-n+3)::before{background:var(--brand);color:#fff}
+.rank .nm{color:var(--ink-2)}
+.rank .pt{font-variant-numeric:tabular-nums;color:var(--brand);font-weight:700}
+
+/* 引语 */
+.quote{border-left:4px solid var(--gold);background:var(--paper);border-radius:0 var(--radius-m) var(--radius-m) 0;padding:var(--sp-3)}
+.quote p{font-size:var(--fs-s);color:var(--ink-2);font-style:italic}
+.quote .by{font-size:var(--fs-xs);color:var(--muted);margin-top:8px;font-style:normal}
+
+/* 侧栏 */
+.side-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);padding:var(--sp-3);box-shadow:var(--shadow-s)}
+.side-card h2,.side-card .h{font-size:1.02rem;margin-bottom:var(--sp-2);padding-bottom:8px;border-bottom:1px solid var(--line)}
+.side-card h2::before,.side-card .h::before{content:"";display:inline-block;width:5px;height:15px;background:var(--accent);border-radius:2px;margin-right:8px;vertical-align:-1px}
+.side-nav{position:sticky;top:calc(var(--sticky) + 10px)}
+.side-nav a{display:block;font-size:var(--fs-s);color:var(--muted);padding:6px 10px;border-radius:var(--radius-s);border-left:2px solid transparent}
+.side-nav a:hover{color:var(--brand);background:var(--brand-soft);text-decoration:none}
+.side-nav a.active{color:var(--brand);font-weight:700;border-left-color:var(--brand);background:var(--brand-soft)}
+.side-list{display:grid;gap:8px}
+.side-list li{font-size:var(--fs-s);color:var(--ink-2);display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline}
+.side-list .d{font-size:var(--fs-xs);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.notice{font-size:var(--fs-s);color:var(--ink-2);display:grid;gap:8px}
+.notice li{padding-left:16px;position:relative}
+.notice li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+/* 页尾 */
+.site-foot{background:var(--ink);color:#b9c1d6;margin-top:var(--sp-5);padding:var(--sp-5) 0 var(--sp-3);font-size:var(--fs-s)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--sp-4)}
+.site-foot .brand{color:#fff;font-size:1.05rem;margin-bottom:10px}
+.site-foot .pos{color:#8f9ab8;font-size:var(--fs-s);line-height:1.7}
+.foot-grid h3{color:#fff;font-size:var(--fs-s);margin-bottom:10px;letter-spacing:.04em}
+.foot-grid li{margin-bottom:7px}
+.foot-grid a{color:#b9c1d6;font-size:var(--fs-s)}
+.foot-grid a:hover{color:var(--gold);text-decoration:none}
+.foot-note{margin-top:var(--sp-4);padding-top:var(--sp-3);border-top:1px solid #2b3350;color:#8f9ab8;font-size:var(--fs-xs);line-height:1.9}
+.foot-note .upd{color:#a7b2cd}
+
+/* 回到顶部 */
+.go-top{
+  position:fixed;right:20px;bottom:24px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--brand);font-size:1rem;cursor:pointer;
+  box-shadow:var(--shadow-m);display:grid;place-items:center;opacity:0;pointer-events:none;
+  transition:opacity .25s,transform .25s;
+}
+.go-top.on{opacity:1;pointer-events:auto}
+.go-top:hover{transform:translateY(-3px)}
+
+/* 响应式 */
+@media(max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr) 264px}
+  .hero .wrap{grid-template-columns:1fr;padding-top:var(--sp-4)}
+  .hero h1{font-size:2.25rem}
+  .hero-art{max-width:420px}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .deep .cols{column-count:1}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:820px){
+  .layout{grid-template-columns:1fr}
+  .side-col{order:2}
+  .main-col{order:1}
+  .nav{display:none;width:100%;flex-direction:column;gap:0;padding:6px 0 10px}
+  .nav.open{display:flex}
+  .nav a{padding:10px 8px;border-bottom:1px solid var(--line);border-radius:0}
+  .menu-btn{display:inline-block}
+  .head-inner{gap:var(--sp-2);justify-content:space-between}
+  .head-tools{order:3}
+  .search input{width:150px}
+  .feature{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare .b{border-left:0;border-top:1px solid var(--line)}
+  .side-nav{position:static}
+}
+@media(max-width:560px){
+  :root{--fs-hero:1.92rem;--sp-4:22px;--sp-5:36px}
+  .sec,.deep{padding:var(--sp-3)}
+  .grid-3{grid-template-columns:1fr}
+  .hero-stats{gap:var(--sp-3)}
+  .timeline li{grid-template-columns:64px 1fr;gap:8px}
+  .timeline .state{grid-column:2;justify-self:start;margin-top:2px}
+  .foot-grid{grid-template-columns:1fr}
+  .search input{width:120px}
+  .go-top{right:14px;bottom:16px}
+  .check > div:nth-child(odd){width:44%}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,.overview-card:hover,.go-top:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 公告条 -->
+<div class="announce" role="region" aria-label="赛事公告">
+  <div class="wrap">
+    <span class="badge">今日赛程</span>
+    <span>11月8日 13:30 城市竞速预选开跑，19:30 冠军战直播，决赛场次检票 18:40 开启。</span>
+    <a href="/#schedule">查看完整日程</a>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="/#top" aria-label="r星今日大赛官网 首页">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="#161b2b"/>
+        <path d="M16 5l3 8h8l-6.5 5 2.5 8-7-5-7 5 2.5-8L5 13h8z" fill="#f4b942"/>
+      </svg>
+      r星今日大赛官网
+    </a>
+    <nav class="nav" id="mainNav" aria-label="主题导航">
+      <a href="/#schedule">今日赛程</a>
+      <a href="/#channels">赛事频道</a>
+      <a href="/#deep">规则解析</a>
+      <a href="/#guide">观赛指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#reviews">观众评论</a>
+      <a href="/#rank">赛季榜单</a>
+    </nav>
+    <div class="head-tools">
+      <div class="search">
+        <input type="search" id="siteSearch" placeholder="搜赛程 / 赛道 / 选手" aria-label="站内搜索">
+        <button type="button" id="searchBtn" aria-label="执行搜索">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5" stroke="#fff" stroke-width="1.8"/><path d="M11 11l3.4 3.4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <ul class="search-result" id="searchResult" aria-live="polite"></ul>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="hero-eyebrow">R* TODAY ARENA · S7 赛季</span>
+      <h1>r星今日大赛官网</h1>
+      <p>当日开赛项目、赛道轮换、队伍名单与直播入口按赛区归在一起。11 月 8 日共 4 个赛场、19 场对局，从城市竞速预选一路排到晚上冠军战，查时间不用翻三个页面。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#schedule">进入今日赛程 →</a>
+        <a class="btn btn-ghost" href="/#channels">按频道浏览</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>19</strong><span>今日对局</span></div>
+        <div><strong>4</strong><span>赛场 / 赛区</span></div>
+        <div><strong>7</strong><span>轮换地图</span></div>
+        <div><strong>2</strong><span>直播时段</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="img" aria-label="赛道与赛事标识示意构图">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f4b942"/><stop offset="1" stop-color="#c2410c"/>
+          </linearGradient>
+        </defs>
+        <rect x="20" y="26" width="380" height="268" rx="26" fill="#0b1130" stroke="#3b4d95" stroke-width="2"/>
+        <path d="M70 230c40-70 30-120 96-138s120 8 158-30" stroke="url(#g1)" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <path d="M70 230c40-70 30-120 96-138s120 8 158-30" stroke="#fff" stroke-width="2" fill="none" stroke-dasharray="10 12" opacity=".8"/>
+        <circle cx="70" cy="230" r="11" fill="#f4b942"/>
+        <circle cx="324" cy="62" r="11" fill="#fff"/>
+        <g fill="#8fa3e0">
+          <rect x="60" y="70" width="96" height="9" rx="4.5"/>
+          <rect x="60" y="92" width="64" height="9" rx="4.5"/>
+          <rect x="60" y="270" width="130" height="9" rx="4.5"/>
+        </g>
+        <text x="300" y="278" fill="#f4b942" font-size="17" font-weight="700" text-anchor="middle">S7</text>
+      </svg>
+      <p class="cap">港口环线 · 山谷夜路 · 双赛道轮换</p>
+    </div>
+  </div>
+</section>
+
+<!-- 主内容 -->
+<div class="wrap layout">
+  <main class="main-col">
+
+    <!-- 1 领域概览 -->
+    <section class="sec" id="overview">
+      <h2>赛事概览：一天里在比什么</h2>
+      <p class="lead">今日赛事由竞速、突袭、团队接力三类项目组成，赛制与积分结算规则各不相同，下面按项目拆开。</p>
+      <div class="grid-3">
+        <div class="overview-card">
+          <div class="k">竞速项目</div>
+          <h3>城市竞速预选赛</h3>
+          <p>单人计时加多人追逐，两条赛道各跑两轮。取两轮最好成绩合计，前 8 名进晚场。地图为<span class="n">港口环线</span>与<span class="n">山谷夜路</span>。</p>
+        </div>
+        <div class="overview-card">
+          <div class="k">突袭项目</div>
+          <h3>团队突袭八强赛</h3>
+          <p>4 支队伍两两对阵，三局两胜。每局 90 秒结束判定，超时按控制点数量结算。今日共 <span class="n">12</span> 局。</p>
+        </div>
+        <div class="overview-card">
+          <div class="k">接力项目</div>
+          <h3>三人协作接力</h3>
+          <p>选手依次接力完成固定路线，中途交接失误扣 3 秒。规则细节见观赛指南中的交接区说明。</p>
+        </div>
+      </div>
+      <h3>积分与晋级口径</h3>
+      <p style="font-size:var(--fs-s);color:var(--muted)">预选赛按名次给分：第 1 名 25 分，第 2 名 18 分，第 3 名 15 分，第 4 至第 8 名依次为 12、10、8、6、4 分。八强赛采用胜场累积，一局 2 分，平局各 1 分，弃权不计分。今日产生的积分将直接影响 11 月 15 日的赛季排名结算，榜单变化可在页面底部查看。</p>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="sec" id="picks">
+      <h2>编辑精选：今天值得盯的几个片段</h2>
+      <p class="lead">从赛前训练数据和对阵表里挑出三段看点，各自附上可核对的时间与地图。</p>
+      <div class="feature">
+        <article class="feature-main">
+          <img src="https://picsum.photos/seed/rstar-race-port/720/440" width="720" height="440" loading="lazy" alt="港口环线赛道路段示意，弯道与集装箱区域">
+          <span class="tag">竞速焦点</span>
+          <h3>港口环线第三弯：本周最快单圈出现在这里</h3>
+          <p>11 月 7 日训练赛，选手「风向标K」跑出 1 分 42 秒 37 的单圈，比 10 月 31 日的 1 分 43 秒 91 快了 1.54 秒，主要收益在第三弯的入弯角度。</p>
+        </article>
+        <ul class="feature-list">
+          <li>
+            <div class="t">八强赛对阵：北岸战术 vs 灰烬车队</div>
+            <div class="m">11月8日 16:00 · 团队突袭 · 三局两胜</div>
+          </li>
+          <li>
+            <div class="t">山谷夜路地图的灯位调整说明</div>
+            <div class="m">11月7日版本 7.3.2 · 弯道照明范围缩小 15%</div>
+          </li>
+          <li>
+            <div class="t">三人接力的交接区：0.4 秒误差怎么来的</div>
+            <div class="m">11月6日 训练录像 · 4 支队伍出现扣秒</div>
+          </li>
+          <li>
+            <div class="t">赛前访谈：灰烬车队教练谈换人</div>
+            <div class="m">11月5日 采访 · 替补选手「灰鹿」首次登场</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="sec" id="schedule">
+      <h2>最新更新：11 月 8 日赛程表</h2>
+      <p class="lead">时间按场馆当地时间，直播在开赛前 15 分钟开放。标注「进行中」表示当前页面展示时段内已开始。</p>
+      <ul class="timeline">
+        <li>
+          <span class="time">13:30</span>
+          <div class="desc"><strong>城市竞速预选赛 A 组</strong><span>港口环线 · 12 名选手 · 单人计时</span></div>
+          <span class="state">已排定</span>
+        </li>
+        <li>
+          <span class="time">14:40</span>
+          <div class="desc"><strong>城市竞速预选赛 B 组</strong><span>山谷夜路 · 12 名选手 · 两轮取优</span></div>
+          <span class="state">已排定</span>
+        </li>
+        <li>
+          <span class="time">16:00</span>
+          <div class="desc"><strong>团队突袭八强赛（上）</strong><span>北岸战术 vs 灰烬车队 · 三局两胜</span></div>
+          <span class="state">已排定</span>
+        </li>
+        <li>
+          <span class="time">17:20</span>
+          <div class="desc"><strong>团队突袭八强赛（下）</strong><span>零度站点 vs 南桥联队 · 三局两胜</span></div>
+          <span class="state">已排定</span>
+        </li>
+        <li>
+          <span class="time">18:30</span>
+          <div class="desc"><strong>三人协作接力表演赛</strong><span>四队参与 · 不计入积分</span></div>
+          <span class="state soon">待开赛</span>
+        </li>
+        <li>
+          <span class="time">19:30</span>
+          <div class="desc"><strong>冠军战 · 突袭决赛</strong><span>上半区胜者 vs 下半区胜者 · 五局三胜</span></div>
+          <span class="state soon">待开赛</span>
+        </li>
+      </ul>
+      <p style="font-size:var(--fs-s);color:var(--muted);margin-top:var(--sp-2)">11 月 6 日 18:00 后的赛程调整仅涉及接力表演赛，由 18:10 顺延至 18:30，原因是场馆交接区地面维护。</p>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="sec" id="channels">
+      <h2>频道入口：按项目与赛区找内容</h2>
+      <p class="lead">每个频道对应独立的赛事线，点击进入对应板块，括号内为当前收录条目数。</p>
+      <div class="chips">
+        <a href="/#schedule">竞速预选赛 <span class="c">18</span></a>
+        <a href="/#schedule">团队突袭八强 <span class="c">12</span></a>
+        <a href="/#guide">地图轮换说明 <span class="c">7</span></a>
+        <a href="/#deep">积分规则解读 <span class="c">5</span></a>
+        <a href="/#guide">观赛与检票 <span class="c">6</span></a>
+        <a href="/#reviews">选手与队伍 <span class="c">24</span></a>
+        <a href="/#rank">赛季积分榜 <span class="c">16</span></a>
+        <a href="/#faq">报名与资格 <span class="c">9</span></a>
+        <a href="/#news">赛事公告 <span class="c">11</span></a>
+        <a href="/#reviews">观众评论区 <span class="c">37</span></a>
+        <a href="/#guide">回放与切片授权 <span class="c">4</span></a>
+        <a href="/#deep">版本更新影响 <span class="c">3</span></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="deep" id="deep">
+      <h2>深度解析：预选赛两轮取优，是否放大了赛道熟悉度</h2>
+      <p class="standfirst">本板块只讨论一条规则的后果：城市竞速预选赛采用「两轮取最好成绩」，而不是两轮相加。判断可以被反驳，依据写在下面。</p>
+
+      <div class="cols">
+        <h3>规则文本与改动时间</h3>
+        <p>城市竞速预选赛在 S7 赛季启用「两轮取优」结算，规则文档版本 7.2.0 于 10 月 28 日发布，正文写明「每位选手在两轮中取单轮最佳成绩作为最终成绩」。S6 赛季的做法是两轮相加，名次按总时长排序。这个改动只影响预选赛，八强赛与决赛仍按局数胜负结算。</p>
+        <p>取优对稳定型的选手不利，对爆发型的选手有利。以 11 月 7 日训练赛数据为例：选手「北岬」两轮成绩为 1 分 44 秒 12 与 1 分 43 秒 05，差 1.07 秒；选手「风向标K」为 1 分 42 秒 37 与 1 分 45 秒 88，差 3.51 秒。按取优结算，前者记 1 分 43 秒 05，后者记 1 分 42 秒 37，后者反超。</p>
+        <p>如果按相加结算，北岬两轮合计 3 分 27 秒 17，风向标K 为 3 分 28 秒 25，北岬领先 1.08 秒。同一批数据，两种结算方式给出相反结论。这不是运气问题，是规则选择把权重放在峰值还是放在稳定。</p>
+      </div>
+
+      <div class="verdict">
+        <div class="lbl">可被反驳的判断</div>
+        <p>「两轮取优」实际上奖励对单条赛道的深度熟悉，而不是全面驾驶能力。理由：取优只保留一个最好单圈，选手只要在一条赛道上刷出峰值即可，另一轮的失误不再计入。反驳路径也存在——如果两轮使用同一张地图的镜像版本，取优对熟悉度的奖励会被削弱。当前 11 月 8 日预选赛两轮确实使用同一地图的正反版本，因此这条判断需要打折：奖励存在，但不至于决定名次。</p>
+      </div>
+
+      <h3>地图轮换节奏的前后对比</h3>
+      <p>当前赛季地图池 7 张，按周轮换。11 月 3 日至 11 月 9 日这一周为港口环线与山谷夜路，两轮分别跑正反版本。上一周是隧道群线与沙丘直道，两轮跑的是同一方向。差异在于：正反版本让选手必须在同一天适应两个方向的弯道节奏，赛前准备时间被压缩。</p>
+      <p>灰烬车队教练在 11 月 5 日采访中给出一个数字：队伍为港口环线的反方向版本单独安排了 6 小时训练，占本周训练总量的 22%。北岸战术没有单独安排，理由是「正反版本的入弯点只差 4 米」。两种准备方式在 11 月 7 日的训练赛上体现为：灰烬车队反方向平均单圈比正方向慢 0.9 秒，北岸战术慢 2.1 秒。</p>
+
+      <h3>把判断拆成可核对的结构</h3>
+      <div class="check" role="table" aria-label="取优规则影响核对表">
+        <div role="rowheader">核对项</div><div role="cell">观测值</div>
+        <div role="rowheader">规则版本</div><div role="cell">7.2.0，10 月 28 日生效，原文「取单轮最佳成绩」</div>
+        <div role="rowheader">对比样本</div><div role="cell">11 月 7 日训练赛，12 名选手，两轮成绩完整公开 11 份</div>
+        <div role="rowheader">结算差异</div><div role="cell">取优与相加两种算法下，名次变化 3 处，最大位移 2 位</div>
+        <div role="rowheader">地图条件</div><div role="cell">同图正反版本，轮换周期 7 天，本周为港口环线 / 山谷夜路</div>
+        <div role="rowheader">结论置信</div><div role="cell">训练赛数据，非正式赛，样本量偏小，判断保留余地</div>
+      </div>
+
+      <h3>版本 7.3.2 对夜路地图的影响</h3>
+      <p>11 月 7 日推送的 7.3.2 版本调整了山谷夜路弯道照明范围，公告原文为「弯道照明半径由 18 米缩减至 15.3 米」。这直接影响夜路单圈的视野判断，尤其是第 6 到第 8 弯的连续弯。版本更新说明未提及是否影响计时器精度，官方论坛的回复帖提到「计时逻辑不变」，属于官方回应而非规则文本。</p>
+      <p>选手「夜路老周」在 11 月 7 日晚间直播中称照明缩小后「第 7 弯要提前 0.2 秒松油门」，这是他个人转述，缺少对照数据。可以确认的是：11 月 7 日之后提交的夜路训练成绩，与 11 月 6 日之前的成绩不宜直接比较，时间差可能来自照明改动而非驾驶水平。</p>
+
+      <h3>谁从规则里拿到实际好处</h3>
+      <p>从 11 月 7 日训练赛看，取优规则下名次提升的 3 名选手都有一轮明显失误，其中 2 人失误发生在反方向版本。受影响最大的是稳定型选手「北岬」，两种算法下名次相差 2 位。若正式赛延续这一格局，预选赛的前 8 晋级名单里，爆发型选手的占比会高于 S6 赛季。</p>
+      <p class="factline">以上判断可反驳：若正式赛两轮之间安排 40 分钟以上间隔，选手有足够时间调整，取优对稳定型选手的抑制会减弱。11 月 8 日实际间隔为 70 分钟，因此这条反驳路径成立，上述判断应视为倾向而非定论。</p>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="sec" id="guide">
+      <h2>体验指南：从进场到看完一场比赛</h2>
+      <p class="lead">按实际动线排的五个步骤，含时间点与场馆位置。线上观看的直接跳到第 4 步。</p>
+      <ol class="steps">
+        <li>
+          <div>
+            <div class="s-title">到场与检票</div>
+            <p>19:30 决赛场次 18:40 开放检票，建议 18:30 前抵达。持电子票与身份证件走 B 口，A 口内侧设物品寄存处，大件背包需寄存。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="s-title">找座位与看清屏幕</div>
+            <p>看台分为东、西两区，东区靠近竞速赛道起点，西区正对突袭控制点。大屏切换在每局开始前 30 秒进行，错过可在场内导视屏补看比分。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="s-title">听懂解说口径</div>
+            <p>解说使用「单圈」「控制点」「交接区」三个固定词。听到「取优」指预选赛取最好成绩；听到「扣秒」指接力交接失误的 3 秒罚时。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="s-title">线上直播与回放</div>
+            <p>直播在开赛前 15 分钟开放，单场结束后 10 分钟更新比分，完整回放当晚 23:00 前上传。回放按场次编号归档，编号格式为日期加场次序号。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="s-title">赛后查成绩与申诉</div>
+            <p>成绩页在比分更新后同步开放。申诉窗口为成绩公布后 2 小时，需由队长提交，理由限计时异常、设备故障、名单错误三类。</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3>两种观赛方式的差异</h3>
+      <div class="compare">
+        <div class="a">
+          <div class="cmp-h">现场观赛</div>
+          <ul>
+            <li>能看到选手交接与设备操作</li>
+            <li>大屏只有主视角，无自由镜头</li>
+            <li>决赛场次需提前 40 分钟到场</li>
+            <li>散场后 20 分钟内交通压力最大</li>
+          </ul>
+        </div>
+        <div class="b">
+          <div class="cmp-h">线上直播</div>
+          <ul>
+            <li>可切换 3 路视角与实时比分条</li>
+            <li>看不到现场设备与选手表情</li>
+            <li>开赛前 15 分钟开放，无需排队</li>
+            <li>回放当晚 23:00 前可反复看</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="sec faq" id="faq">
+      <h2>常见问题</h2>
+      <p class="lead">按提问频率排序，答案涉及具体时间与规则条款。</p>
+      <details open>
+        <summary>今日大赛的直播从几点开始？</summary>
+        <div class="ans"><p>11 月 8 日分三个时段：13:30 城市竞速预选、16:00 团队突袭八强、19:30 冠军战。直播间在开赛前 15 分钟开放，赛程表已标注每场时间。</p></div>
+      </details>
+      <details>
+        <summary>参赛资格怎么确认？名单能改吗？</summary>
+        <div class="ans"><p>需持有当季通行证并在报名页提交队伍名单，名单在赛前 48 小时锁定。11 月 6 日之后提交的替换申请只接受医疗与设备故障两类理由，需附凭证。</p></div>
+      </details>
+      <details>
+        <summary>成绩与回放多久内公布？</summary>
+        <div class="ans"><p>单场结束后 10 分钟内更新比分，完整回放当晚 23:00 前上传。申诉窗口为成绩公布后 2 小时，超时不处理。</p></div>
+      </details>
+      <details>
+        <summary>赛道地图每周会更换吗？</summary>
+        <div class="ans"><p>竞速类地图按赛季轮换，当前赛季 7 张地图循环。11 月 3 日至 9 日这一周使用港口环线与山谷夜路两张，两轮分别跑正反版本。突袭模式地图池保持 6 张不变。</p></div>
+      </details>
+      <details>
+        <summary>现场观众需要提前多久入场？</summary>
+        <div class="ans"><p>建议开赛前 40 分钟到场。19:30 决赛场次 18:40 开放检票，持电子票与身份证件走 B 口，物品寄存处在 A 口内侧。</p></div>
+      </details>
+      <details>
+        <summary>转播画面可以二次剪辑吗？</summary>
+        <div class="ans"><p>非商业用途的剪辑片段允许发布，需保留赛事水印并在简介标注场次编号。商业用途需在比赛结束 7 天内提交授权申请，审批周期约 5 个工作日。</p></div>
+      </details>
+      <details>
+        <summary>接力表演赛为什么不计积分？</summary>
+        <div class="ans"><p>表演赛定位为展示与测试，规则允许队伍使用非报名阵容。11 月 8 日 18:30 的场次有四队参与，成绩单独公布，不计入赛季积分榜。</p></div>
+      </details>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="sec" id="reviews">
+      <h2>观众评论：今天大家在看什么</h2>
+      <p class="lead">来自现场与直播间的留言，保留语气差异与具体指向，未做统一润色。</p>
+      <div class="reviews">
+        <article class="review">
+          <div class="who">
+            <span class="avatar">岬</span>
+            <div><div class="nm">弯道观察员</div><div class="mt">11月8日 14:12 · 预选赛 A 组现场</div></div>
+            <span class="stars" style="margin-left:auto">★★★★☆</span>
+          </div>
+          <p>港口环线第三弯的入弯线今天明显比训练赛收得早，风向标K 那一圈 1 分 42 秒 37 不是白来的。就是取优规则看着别扭，北岬第二轮 1 分 43 秒 05 已经很稳，结果名次还是被压。</p>
+        </article>
+        <article class="review">
+          <div class="who">
+            <span class="avatar">桥</span>
+            <div><div class="nm">南桥夜班</div><div class="mt">11月8日 16:48 · 直播间</div></div>
+            <span class="stars" style="margin-left:auto">★★★☆☆</span>
+          </div>
+          <p>八强赛上半场第二局那个超时判定有点糊，90 秒到了但控制点读秒好像慢了一拍。解说说按控制点数量结算，可画面里只显示 2 比 1，第三个点到底算不算？希望成绩页把判定依据写清楚。</p>
+        </article>
+        <article class="review">
+          <div class="who">
+            <span class="avatar">灰</span>
+            <div><div class="nm">灰鹿的替补席</div><div class="mt">11月8日 17:05 · 现场西区</div></div>
+            <span class="stars" style="margin-left:auto">★★★★★</span>
+          </div>
+          <p>灰鹿首次登场没掉链子，第三局两个控制点都是他压住的。灰烬车队反方向训练那 6 小时看得出效果，山谷夜路的连续弯没有一次撞墙。</p>
+        </article>
+        <article class="review">
+          <div class="who">
+            <span class="avatar">周</span>
+            <div><div class="nm">夜路老周</div><div class="mt">11月7日 22:40 · 个人直播回放</div></div>
+            <span class="stars" style="margin-left:auto">★★☆☆☆</span>
+          </div>
+          <p>照明半径缩到 15.3 米之后，第 7 弯提前松油门是必须的，但官方只回一句「计时逻辑不变」，没给新旧版本的对照圈速。训练成绩和上周没法直接比，这点得说清楚。</p>
+        </article>
+        <article class="review">
+          <div class="who">
+            <span class="avatar">检</span>
+            <div><div class="nm">B口检票员小陈</div><div class="mt">11月8日 18:52 · 场馆 B 口</div></div>
+            <span class="stars" style="margin-left:auto">★★★★☆</span>
+          </div>
+          <p>18:40 开放检票后人流比预想平稳，寄存处排了十来个人。提醒一下带大包的走 A 口内侧，B 口只过小件，别到这儿再折返。</p>
+        </article>
+        <article class="review">
+          <div class="who">
+            <span class="avatar">分</span>
+            <div><div class="nm">只看得懂比分</div><div class="mt">11月8日 15:20 · 直播间</div></div>
+            <span class="stars" style="margin-left:auto">★★★☆☆</span>
+          </div>
+          <p>取优和相加两种算法给不同名次，这个说明终于有人讲明白了。但页面上训练赛数据只公开 11 份，剩下 1 份为什么不放？样本不完整的话，那 3 处名次变化的结论也不算硬。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="sec" id="news">
+      <h2>相关资讯与公告</h2>
+      <p class="lead">按发布时间倒序，每条注明来源或发布主体。</p>
+      <ul class="newslist">
+        <li><a class="ttl" href="/#schedule">11 月 8 日接力表演赛顺延至 18:30，场馆交接区地面维护</a><span class="mt">11月6日 18:00</span></li>
+        <li><a class="ttl" href="/#deep">版本 7.3.2 推送：山谷夜路弯道照明半径缩至 15.3 米</a><span class="mt">11月7日 09:30</span></li>
+        <li><a class="ttl" href="/#faq">名单锁定时间说明：赛前 48 小时，替换申请限两类理由</a><span class="mt">11月6日 11:15</span></li>
+        <li><a class="ttl" href="/#reviews">灰烬车队教练采访：反方向版本单列 6 小时训练</a><span class="mt">11月5日 16:40</span></li>
+        <li><a class="ttl" href="/#deep">规则文档 7.2.0 发布，预选赛改为两轮取单轮最佳</a><span class="mt">10月28日 14:00</span></li>
+        <li><a class="ttl" href="/#guide">回放切片授权细则更新：非商业用途需保留水印与场次编号</a><span class="mt">11月4日 10:20</span></li>
+      </ul>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="sec" id="related">
+      <h2>相关推荐</h2>
+      <p class="lead">按你刚看过的赛程、规则与地图延伸出的检索词。</p>
+      <div class="tagwall">
+        <a href="/#deep">两轮取优规则怎么算</a>
+        <a href="/#schedule">11月8日冠军战时间</a>
+        <a href="/#guide">山谷夜路照明调整影响</a>
+        <a href="/#reviews">灰烬车队替补灰鹿</a>
+        <a href="/#rank">S7 赛季积分榜更新</a>
+        <a href="/#faq">队伍名单锁定时间</a>
+        <a href="/#guide">现场检票与寄存流程</a>
+        <a href="/#deep">港口环线第三弯单圈纪录</a>
+        <a href="/#news">接力表演赛顺延原因</a>
+        <a href="/#guide">回放切片授权申请</a>
+        <a href="/#faq">观赛直播几点开</a>
+        <a href="/#channels">团队突袭地图池</a>
+      </div>
+    </section>
+
+    <!-- 11 榜单 / 时间线 -->
+    <section class="sec" id="rank">
+      <h2>赛季积分榜与关键时间线</h2>
+      <p class="lead">积分截至 11 月 8 日 17:20，含今日已结算场次；时间线只列与今日赛事直接相关的节点。</p>
+      <h3>竞速项目积分前六</h3>
+      <ol class="rank">
+        <li><span class="nm">风向标K</span><span class="pt">168</span></li>
+        <li><span class="nm">北岬</span><span class="pt">161</span></li>
+        <li><span class="nm">隧道口阿雷</span><span class="pt">149</span></li>
+        <li><span class="nm">夜路老周</span><span class="pt">142</span></li>
+        <li><span class="nm">沙丘直道王</span><span class="pt">137</span></li>
+        <li><span class="nm">湾岸小满</span><span class="pt">128</span></li>
+      </ol>
+      <h3>时间线</h3>
+      <ul class="timeline">
+        <li><span class="time">10月28日</span><div class="desc"><strong>规则 7.2.0 生效</strong><span>预选赛结算改为两轮取优</span></div><span class="state">已生效</span></li>
+        <li><span class="time">11月3日</span><div class="desc"><strong>地图轮换至港口环线 / 山谷夜路</strong><span>本周两轮跑正反版本</span></div><span class="state">本周</span></li>
+        <li><span class="time">11月6日</span><div class="desc"><strong>参赛名单锁定</strong><span>替换申请限医疗与设备故障</span></div><span class="state">已锁定</span></li>
+        <li><span class="time">11月7日</span><div class="desc"><strong>版本 7.3.2 推送</strong><span>夜路照明半径缩至 15.3 米</span></div><span class="state">已推送</span></li>
+        <li><span class="time">11月8日</span><div class="desc"><strong>预选赛与八强赛</strong><span>19 场对局，冠军战 19:30</span></div><span class="state soon">今日</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- 侧栏 -->
+  <aside class="side-col" aria-label="辅助信息">
+    <div class="side-card side-nav" id="sideNav">
+      <div class="h">页面导航</div>
+      <a href="/#overview">赛事概览</a>
+      <a href="/#picks">编辑精选</a>
+      <a href="/#schedule">今日赛程</a>
+      <a href="/#channels">频道入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#reviews">观众评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#related">相关推荐</a>
+      <a href="/#rank">积分榜与时间线</a>
+    </div>
+    <div class="side-card">
+      <div class="h">今日待开赛</div>
+      <ul class="side-list">
+        <li><span class="d">18:30</span><span>三人协作接力表演赛</span></li>
+        <li><span class="d">19:30</span><span>冠军战 · 突袭决赛</span></li>
+        <li><span class="d">23:00</span><span>完整回放上传截止</span></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <div class="h">观赛提醒</div>
+      <ul class="notice">
+        <li>决赛场次 18:40 开放检票，B 口只过小件物品。</li>
+        <li>夜路地图照明已调整，训练数据与上周不可直接比较。</li>
+        <li>申诉限成绩公布后 2 小时，由队长提交。</li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <div class="h">赛场信息</div>
+      <ul class="side-list">
+        <li><span class="d">A区</span><span>竞速起点 · 计时台</span></li>
+        <li><span class="d">B口</span><span>检票入口 · 小件通道</span></li>
+        <li><span class="d">西区</span><span>突袭控制点正对看台</span></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">
+          <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="14" fill="#f4b942"/>
+            <path d="M16 5l3 8h8l-6.5 5 2.5 8-7-5-7 5 2.5-8L5 13h8z" fill="#161b2b"/>
+          </svg>
+          r星今日大赛官网
+        </div>
+        <p class="pos">当日赛事的时间表、赛道轮换、积分口径与观赛动线汇在一处，按赛区和项目分开呈现。</p>
+      </div>
+      <div>
+        <h3>赛事</h3>
+        <ul>
+          <li><a href="/#schedule">今日赛程</a></li>
+          <li><a href="/#channels">频道入口</a></li>
+          <li><a href="/#rank">积分榜</a></li>
+          <li><a href="/#news">赛事公告</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>规则与指南</h3>
+        <ul>
+          <li><a href="/#deep">规则解析</a></li>
+          <li><a href="/#guide">观赛指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>社区</h3>
+        <ul>
+          <li><a href="/#reviews">观众评论</a></li>
+          <li><a href="/#picks">编辑精选</a></li>
+          <li><a href="/#overview">赛事概览</a></li>
+          <li><a href="/#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <p>示例数据说明：页面中的选手名、队伍名、赛道名称与训练数据为演示用的虚拟条目，非真实赛事记录；时间、积分口径与版本号按示例设定编排，不构成报名或参赛依据。</p>
+      <p class="upd">页脚更新时间 2026-11-08 18:00，对应正文更新项：接力表演赛顺延至 18:30、版本 7.3.2 夜路照明调整、名单锁定与替换规则。</p>
+      <p>© 2026 r星今日大赛官网 · 内容仅作赛事信息示例展示</p>
+    </div>
+  </div>
+</footer>
+
+<button class="go-top" id="goTop" aria-label="回到顶部" type="button">↑</button>
+
+<script>
+(function(){
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.textContent = open ? '收起' : '菜单';
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.matchMedia('(max-width:820px)').matches){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent = '菜单';
+      }
+    });
+  }
+
+  /* 本地搜索 */
+  var input = document.getElementById('siteSearch');
+  var out = document.getElementById('searchResult');
+  var btn = document.getElementById('searchBtn');
+  var data = [
+    {t:'今日赛程 11月8日', d:'13:30 预选 / 16:00 八强 / 19:30 冠军战', u:'/#schedule'},
+    {t:'两轮取优规则解析', d:'规则 7.2.0 与 S6 相加结算对比', u:'/#deep'},
+    {t:'港口环线与山谷夜路地图', d:'本周轮换，两轮跑正反版本', u:'/#guide'},
+    {t:'团队突袭八强对阵', d:'北岸战术 vs 灰烬车队，零度站点 vs 南桥联队', u:'/#schedule'},
+    {t:'山谷夜路照明调整', d:'版本 7.3.2，半径 18 米缩至 15.3 米', u:'/#news'},
+    {t:'报名与名单锁定', d:'赛前 48 小时锁定，替换限两类理由', u:'/#faq'},
+    {t:'现场检票与寄存', d:'决赛 18:40 开放，B 口过小件', u:'/#guide'},
+    {t:'赛季积分榜 S7', d:'风向标K 168 分居首', u:'/#rank'},
+    {t:'观众评论与回放授权', d:'非商业切片需保留水印与场次编号', u:'/#reviews'},
+    {t:'接力表演赛 18:30', d:'四队参与，不计积分', u:'/#schedule'}
+  ];
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function render(kw){
+    out.innerHTML = '';
+    kw = kw.trim();
+    if(!kw){out.classList.remove('on');return;}
+    var hits = data.filter(function(x){return (x.t + x.d).toLowerCase().indexOf(kw.toLowerCase()) > -1;});
+    if(!hits.length){
+      out.innerHTML = '<li class="none">没找到「' + esc(kw) + '」，可试试「赛程」「取优」「夜路」「检票」等词。</li>';
+      out.classList.add('on');
+      return;
+    }
+    var html = '';
+    hits.forEach(function(x){
+      var t = esc(x.t).replace(new RegExp(kw.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi'), function(m){return '<mark>'+m+'</mark>';});
+      html += '<li><a href="' + x.u + '">' + t + '<br><span style="font-size:.75rem;color:#5c6479">' + esc(x.d) + '</span></a></li>';
+    });
+    out.innerHTML = html;
+    out.classList.add('on');
+  }
+  if(input && out && btn){
+    var timer;
+    input.addEventListener('input', function(){
+      clearTimeout(timer);
+      timer = setTimeout(function(){render(input.value);}, 160);
+    });
+    btn.addEventListener('click', function(){render(input.value);});
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){e.preventDefault();render(input.value);}
+      if(e.key === 'Escape'){out.classList.remove('on');}
+    });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.search')){out.classList.remove('on');}
+    });
+  }
+
+  /* 回到顶部 */
+  var goTop = document.getElementById('goTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){goTop.classList.add('on');}else{goTop.classList.remove('on');}
+  }, {passive:true});
+  if(goTop){
+    goTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* 侧栏滚动高亮 */
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var secs = links.map(function(a){return document.querySelector(a.getAttribute('href').replace('/#','#'));}).filter(Boolean);
+  if('IntersectionObserver' in window && secs.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(a){
+            a.classList.toggle('active', a.getAttribute('href').replace('/#','#') === '#' + en.target.id);
+          });
+        }
+      });
+    }, {rootMargin:'-100px 0px -62% 0px', threshold:0});
+    secs.forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+                                           </html>
